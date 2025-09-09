@@ -4,7 +4,7 @@ import scrapy
 
 
 class WongSpider(scrapy.Spider):
-    name = "wongspider"
+    name = "otherspider"
     url = "https://www.wong.pe/hogar-y-bazar?initialMap=c&initialQuery=hogar-y-bazar&map=category-1,category-2&query=/hogar-y-bazar/halloween&searchState"
 
     def start_requests(self):
