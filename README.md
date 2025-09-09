@@ -1,6 +1,6 @@
 # presio-product-api
 
-API to get product prices.
+API to get product prices batch
 
 ---
 
