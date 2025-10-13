@@ -1,0 +1,10 @@
+
+
+commands
+>crapy crawl wong -O out.json
+
+db mysql
+>use presio
+
+11.10.2105
+>guardar en bd los productos

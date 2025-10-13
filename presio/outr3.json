@@ -1,0 +1,2410 @@
+[
+    {
+        "product": {
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "item": {
+                        "@context": "https://schema.org/",
+                        "@type": "Product",
+                        "@id": "https://www.wong.pe/lavadora-samsung-ai-wash-ecobubble-19kg-negra-1038070/p",
+                        "name": "Lavadora Samsung AI Wash EcoBubble 19kg Negra",
+                        "brand": {
+                            "@type": "Brand",
+                            "name": "Samsung"
+                        },
+                        "image": "https://wongio.vtexassets.com/arquivos/ids/780922/Lavadora-Samsung-AI-Wash-EcoBubble-19kg-Negra-1-351694493.jpg?v=638890726123870000",
+                        "description": "&lt;li&gt;AI Wash&lt;/li&gt;&lt;li&gt; SmartThing con AI Energy mode&lt;/li&gt;&lt;li&gt;Ecobubble?&lt;/li&gt;",
+                        "mpn": "1038070",
+                        "sku": "39313991",
+                        "offers": {
+                            "@type": "AggregateOffer",
+                            "lowPrice": 1599,
+                            "highPrice": 1599,
+                            "priceCurrency": "PEN",
+                            "offers": [
+                                {
+                                    "@type": "Offer",
+                                    "price": 1599,
+                                    "priceCurrency": "PEN",
+                                    "availability": "http://schema.org/InStock",
+                                    "sku": "39313991",
+                                    "itemCondition": "http://schema.org/NewCondition",
+                                    "priceValidUntil": "2025-10-01T14:00:00Z",
+                                    "seller": {
+                                        "@type": "Organization",
+                                        "name": "wongfood"
+                                    }
+                                }
+                            ],
+                            "offerCount": 1
+                        }
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "item": {
+                        "@context": "https://schema.org/",
+                        "@type": "Product",
+                        "@id": "https://www.wong.pe/lavadora-samsung-wa13cg5441bdpe-13kg-gris-1014675/p",
+                        "name": "Lavadora Samsung Wa13Cg5441Bdpe 13Kg Gris",
+                        "brand": {
+                            "@type": "Brand",
+                            "name": "Samsung"
+                        },
+                        "image": "https://wongio.vtexassets.com/arquivos/ids/710570/LAV-WA13CG5441BDPE-13KG-GRIS-1-351673012.jpg?v=638530330460570000",
+                        "description": "&lt;li&gt;&lt;b&gt;No aplica para retiro en tienda. Sólo delivery.&lt;/b&gt;&lt;/li&gt;&lt;li&gt;Ecobubble&lt;/li&gt;&lt;li&gt;Lavado intenso&lt;/li&gt;&lt;li&gt;Suavizante profundo&lt;/li&gt;",
+                        "mpn": "1014675",
+                        "sku": "39283778",
+                        "offers": {
+                            "@type": "AggregateOffer",
+                            "lowPrice": 1399,
+                            "highPrice": 1399,
+                            "priceCurrency": "PEN",
+                            "offers": [
+                                {
+                                    "@type": "Offer",
+                                    "price": 1399,
+                                    "priceCurrency": "PEN",
+                                    "availability": "http://schema.org/InStock",
+                                    "sku": "39283778",
+                                    "itemCondition": "http://schema.org/NewCondition",
+                                    "priceValidUntil": "2026-09-30T22:10:19Z",
+                                    "seller": {
+                                        "@type": "Organization",
+                                        "name": "wongfood"
+                                    }
+                                }
+                            ],
+                            "offerCount": 1
+                        }
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "item": {
+                        "@context": "https://schema.org/",
+                        "@type": "Product",
+                        "@id": "https://www.wong.pe/refrigerador-side-by-side-lg-ls51bpp-509l-multi-air-flow-plateada-986261-2/p",
+                        "name": "Refrigerador Side by Side LG LS51BPP 509L Multi Air Flow Plateada",
+                        "brand": {
+                            "@type": "Brand",
+                            "name": "LG"
+                        },
+                        "image": "https://wongio.vtexassets.com/arquivos/ids/759429/986261-1.jpg.jpg?v=638781003635200000",
+                        "description": "&lt;li&gt;&lt;b&gt;No aplica para retiro en tienda. Sólo delivery.&lt;/b&gt;&lt;/li&gt;&lt;li&gt;Total No Frost: Evita la acumulación de escarcha&lt;/li&gt;&lt;li&gt;Múltiples salidas de aire&lt;/li&gt;&lt;li&gt;Panel Led Táctil: manera conveniente de modificar la configuración&lt;/li&gt;&lt;p class=&quot;modelo&quot; style=&quot;display:none;&quot;&gt;LS51BPP.AHSGLPR&lt;/p&gt;",
+                        "mpn": "986261",
+                        "sku": "39261109",
+                        "offers": {
+                            "@type": "AggregateOffer",
+                            "lowPrice": 1999,
+                            "highPrice": 1999,
+                            "priceCurrency": "PEN",
+                            "offers": [
+                                {
+                                    "@type": "Offer",
+                                    "price": 1999,
+                                    "priceCurrency": "PEN",
+                                    "availability": "http://schema.org/InStock",
+                                    "sku": "39261109",
+                                    "itemCondition": "http://schema.org/NewCondition",
+                                    "priceValidUntil": "2026-09-30T22:09:20Z",
+                                    "seller": {
+                                        "@type": "Organization",
+                                        "name": "wongfood"
+                                    }
+                                }
+                            ],
+                            "offerCount": 1
+                        }
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 4,
+                    "item": {
+                        "@context": "https://schema.org/",
+                        "@type": "Product",
+                        "@id": "https://www.wong.pe/cocina-a-gas-24-midea-4-quemadores-negra-1040645/p",
+                        "name": "Cocina a Gas 24&quot; Midea 4 Quemadores Negra",
+                        "brand": {
+                            "@type": "Brand",
+                            "name": "Midea"
+                        },
+                        "image": "https://wongio.vtexassets.com/arquivos/ids/791734/Cocina-a-Gas-24-Midea-4-Quemadores-Negra-1-351697881.jpg?v=638944202244700000",
+                        "description": "&lt;li&gt;4 Quemadores: 1 Grande + 2 medianos + 1 pequeño&lt;/li&gt;&lt;li&gt;Parrillas de Alambrón reforzado Mate y Cubierta de  Acero Inoxidable&lt;/li&gt;&lt;li&gt; Encendido electrónico en Horno y Quemadores&lt;/li&gt;",
+                        "mpn": "1040645",
+                        "sku": "39318688",
+                        "offers": {
+                            "@type": "AggregateOffer",
+                            "lowPrice": 549,
+                            "highPrice": 549,
+                            "priceCurrency": "PEN",
+                            "offers": [
+                                {
+                                    "@type": "Offer",
+                                    "price": 549,
+                                    "priceCurrency": "PEN",
+                                    "availability": "http://schema.org/InStock",
+                                    "sku": "39318688",
+                                    "itemCondition": "http://schema.org/NewCondition",
+                                    "priceValidUntil": "2025-10-01T14:00:00Z",
+                                    "seller": {
+                                        "@type": "Organization",
+                                        "name": "wongfood"
+                                    }
+                                }
+                            ],
+                            "offerCount": 1
+                        }
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 5,
+                    "item": {
+                        "@context": "https://schema.org/",
+                        "@type": "Product",
+                        "@id": "https://www.wong.pe/lavadora-carga-superior-lg-wt17dv6t-ai-dd-17-kg-gris-1016816/p",
+                        "name": "Lavadora Carga Superior LG WT17DV6T AI DD 17 Kg Gris",
+                        "brand": {
+                            "@type": "Brand",
+                            "name": "LG"
+                        },
+                        "image": "https://wongio.vtexassets.com/arquivos/ids/715195/Lavadora-LG-WT17DV6T-AI-DD-Gris-1-351675825.jpg?v=638563377757930000",
+                        "description": "&lt;li&gt;&lt;b&gt;No aplica para retiro en tienda. Sólo delivery.&lt;/b&gt;&lt;/li&gt;&lt;li&gt;AI DD Inteligencia Artificial&lt;/li&gt;&lt;li&gt;6 Motion DD&lt;/li&gt;&lt;li&gt;Scent&lt;/li&gt;",
+                        "mpn": "1016816",
+                        "sku": "39288411",
+                        "offers": {
+                            "@type": "AggregateOffer",
+                            "lowPrice": 1499,
+                            "highPrice": 1499,
+                            "priceCurrency": "PEN",
+                            "offers": [
+                                {
+                                    "@type": "Offer",
+                                    "price": 1499,
+                                    "priceCurrency": "PEN",
+                                    "availability": "http://schema.org/InStock",
+                                    "sku": "39288411",
+                                    "itemCondition": "http://schema.org/NewCondition",
+                                    "priceValidUntil": "2026-09-30T22:10:19Z",
+                                    "seller": {
+                                        "@type": "Organization",
+                                        "name": "wongfood"
+                                    }
+                                }
+                            ],
+                            "offerCount": 1
+                        }
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 6,
+                    "item": {
+                        "@context": "https://schema.org/",
+                        "@type": "Product",
+                        "@id": "https://www.wong.pe/lavadora-carga-superior-lg-wt13bpbk-13-kg-smart-motion-negro-claro-1015534/p",
+                        "name": "Lavadora Carga Superior LG WT13BPBK 13 Kg Smart Motion Negro Claro",
+                        "brand": {
+                            "@type": "Brand",
+                            "name": "LG"
+                        },
+                        "image": "https://wongio.vtexassets.com/arquivos/ids/702116/Lavadora-LG-WT13BPBK-13Kg-Smart-Motion-Negro-Claro-1-351673679.jpg?v=638502574126700000",
+                        "description": "&lt;li&gt;&lt;b&gt;No aplica para retiro en tienda. Sólo delivery.&lt;/b&gt;&lt;/li&gt;&lt;li&gt;TurboDrum&lt;/li&gt;&lt;li&gt;Auto Pre Lavado&lt;/li&gt;&lt;li&gt;Limpieza de Tina&lt;/li&gt;",
+                        "mpn": "1015534",
+                        "sku": "39284563",
+                        "offers": {
+                            "@type": "AggregateOffer",
+                            "lowPrice": 1199,
+                            "highPrice": 1199,
+                            "priceCurrency": "PEN",
+                            "offers": [
+                                {
+                                    "@type": "Offer",
+                                    "price": 1199,
+                                    "priceCurrency": "PEN",
+                                    "availability": "http://schema.org/InStock",
+                                    "sku": "39284563",
+                                    "itemCondition": "http://schema.org/NewCondition",
+                                    "priceValidUntil": "2026-09-30T22:09:20Z",
+                                    "seller": {
+                                        "@type": "Organization",
+                                        "name": "wongfood"
+                                    }
+                                }
+                            ],
+                            "offerCount": 1
+                        }
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 7,
+                    "item": {
+                        "@context": "https://schema.org/",
+                        "@type": "Product",
+                        "@id": "https://www.wong.pe/lavadora-carga-superior-lg-wt19bv6t-ai-dd-19-kg-negro-1016819/p",
+                        "name": "Lavadora Carga Superior LG WT19BV6T AI DD 19 Kg Negro",
+                        "brand": {
+                            "@type": "Brand",
+                            "name": "LG"
+                        },
+                        "image": "https://wongio.vtexassets.com/arquivos/ids/715197/Lavadora-LG-WT19BV6T-AI-DD-Negro-1-351675826.jpg?v=638563377764330000",
+                        "description": "&lt;li&gt;&lt;b&gt;No aplica para retiro en tienda. Sólo delivery.&lt;/b&gt;&lt;/li&gt;&lt;li&gt;AI DD Inteligencia Artificial&lt;/li&gt;&lt;li&gt;6 motion DD&lt;/li&gt;&lt;li&gt;Smart Diagnosis&lt;/li&gt;",
+                        "mpn": "1016819",
+                        "sku": "39288412",
+                        "offers": {
+                            "@type": "AggregateOffer",
+                            "lowPrice": 1899,
+                            "highPrice": 1899,
+                            "priceCurrency": "PEN",
+                            "offers": [
+                                {
+                                    "@type": "Offer",
+                                    "price": 1899,
+                                    "priceCurrency": "PEN",
+                                    "availability": "http://schema.org/InStock",
+                                    "sku": "39288412",
+                                    "itemCondition": "http://schema.org/NewCondition",
+                                    "priceValidUntil": "2026-09-30T22:10:19Z",
+                                    "seller": {
+                                        "@type": "Organization",
+                                        "name": "wongfood"
+                                    }
+                                }
+                            ],
+                            "offerCount": 1
+                        }
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 8,
+                    "item": {
+                        "@context": "https://schema.org/",
+                        "@type": "Product",
+                        "@id": "https://www.wong.pe/refrigeradora-samsung-234l-rt22farads8-pe-all-around-cooling-713486-2/p",
+                        "name": "Refrigeradora Samsung 234L RT22FARADS8/PE All Around Cooling",
+                        "brand": {
+                            "@type": "Brand",
+                            "name": "Samsung"
+                        },
+                        "image": "https://wongio.vtexassets.com/arquivos/ids/627559/713486-1.jpg?v=638170873345330000",
+                        "description": "&lt;li&gt;&lt;b&gt;No aplica para retiro en tienda. Sólo delivery.&lt;/b&gt;&lt;/li&gt;&lt;li&gt;Capacidad de 234 litros&lt;/li&gt;&lt;li&gt;Sistema de enfriamiento All Around Cooling&lt;/li&gt;&lt;li&gt;Ventilación de Multiflujo&lt;/li&gt;&lt;li&gt;Cajón Moist Fresh Zone&lt;/li&gt;&lt;li&gt;Bandeja Easy Slide&lt;/li&gt;&lt;li&gt;Filtro desodorizante&lt;/li&gt;&lt;li&gt;Medidas (Alt x Anch x Prof): 154.5 x 55.5 x 63.7 cm&lt;/li&gt;&lt;p class=&quot;modelo&quot; style=&quot;display:none;&quot;&gt;RT22FARADS8/PE&lt;/li&gt;&lt;p class=&quot;modelo&quot; style=&quot;display:none;&quot;&gt;RT22FARADS8/PE&lt;/p&gt;",
+                        "mpn": "713486",
+                        "sku": "34528",
+                        "offers": {
+                            "@type": "AggregateOffer",
+                            "lowPrice": 1099,
+                            "highPrice": 1099,
+                            "priceCurrency": "PEN",
+                            "offers": [
+                                {
+                                    "@type": "Offer",
+                                    "price": 1099,
+                                    "priceCurrency": "PEN",
+                                    "availability": "http://schema.org/InStock",
+                                    "sku": "34528",
+                                    "itemCondition": "http://schema.org/NewCondition",
+                                    "priceValidUntil": "2026-09-30T22:10:41Z",
+                                    "seller": {
+                                        "@type": "Organization",
+                                        "name": "wongfood"
+                                    }
+                                }
+                            ],
+                            "offerCount": 1
+                        }
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 9,
+                    "item": {
+                        "@context": "https://schema.org/",
+                        "@type": "Product",
+                        "@id": "https://www.wong.pe/oster-licuadora-osterizer-250-22-600w-6632-2/p",
+                        "name": "Oster Licuadora Osterizer 250-22 600W",
+                        "brand": {
+                            "@type": "Brand",
+                            "name": "Oster"
+                        },
+                        "image": "https://wongio.vtexassets.com/arquivos/ids/165175/frontal.jpg?v=638176185242230000",
+                        "description": "&lt;li&gt;&lt;b&gt;No aplica para retiro en tienda. Sólo delivery.&lt;/b&gt;&lt;/li&gt;&lt;li&gt;Capacidad de jarra: 1.25 Lt&lt;/li&gt;&lt;li&gt;Potencia de 600 watts&lt;/li&gt;&lt;li&gt;Cuchilla de acero inoxidable&lt;/li&gt;",
+                        "mpn": "6632",
+                        "sku": "15452",
+                        "offers": {
+                            "@type": "AggregateOffer",
+                            "lowPrice": 229,
+                            "highPrice": 229,
+                            "priceCurrency": "PEN",
+                            "offers": [
+                                {
+                                    "@type": "Offer",
+                                    "price": 229,
+                                    "priceCurrency": "PEN",
+                                    "availability": "http://schema.org/InStock",
+                                    "sku": "15452",
+                                    "itemCondition": "http://schema.org/NewCondition",
+                                    "priceValidUntil": "2026-09-30T22:16:24Z",
+                                    "seller": {
+                                        "@type": "Organization",
+                                        "name": "wongfood"
+                                    }
+                                }
+                            ],
+                            "offerCount": 1
+                        }
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 10,
+                    "item": {
+                        "@context": "https://schema.org/",
+                        "@type": "Product",
+                        "@id": "https://www.wong.pe/lavaseca-carga-frontal-lg-wd11pvc3s6-ai-dd-plateado-1017846/p",
+                        "name": "Lavaseca Carga Frontal LG WD11PVC3S6 AI DD Plateado",
+                        "brand": {
+                            "@type": "Brand",
+                            "name": "LG"
+                        },
+                        "image": "https://wongio.vtexassets.com/arquivos/ids/714050/Lavaseca-LG-Wd11Pvc3S6-Ai-Dd-Plateado-1-351676081.jpg?v=638557977745270000",
+                        "description": "&lt;li&gt;&lt;b&gt;No aplica para retiro en tienda. Sólo delivery.&lt;/b&gt;&lt;/li&gt;&lt;li&gt;AI DD Inteligencia Aritificial&lt;/li&gt;&lt;li&gt;Lavado a vapor&lt;/li&gt;&lt;li&gt;6 Motion DD&lt;/li&gt;",
+                        "mpn": "1017846",
+                        "sku": "39290114",
+                        "offers": {
+                            "@type": "AggregateOffer",
+                            "lowPrice": 1999,
+                            "highPrice": 1999,
+                            "priceCurrency": "PEN",
+                            "offers": [
+                                {
+                                    "@type": "Offer",
+                                    "price": 1999,
+                                    "priceCurrency": "PEN",
+                                    "availability": "http://schema.org/InStock",
+                                    "sku": "39290114",
+                                    "itemCondition": "http://schema.org/NewCondition",
+                                    "priceValidUntil": "2026-09-30T22:10:21Z",
+                                    "seller": {
+                                        "@type": "Organization",
+                                        "name": "wongfood"
+                                    }
+                                }
+                            ],
+                            "offerCount": 1
+                        }
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 11,
+                    "item": {
+                        "@context": "https://schema.org/",
+                        "@type": "Product",
+                        "@id": "https://www.wong.pe/ref-rt38dg6730s9pe-tmf-384l-silver-c-d/p",
+                        "name": "Refrigeradora Samsung TMF 384L RT38DG6730S9/PE",
+                        "brand": {
+                            "@type": "Brand",
+                            "name": "Samsung"
+                        },
+                        "image": "https://wongio.vtexassets.com/arquivos/ids/753470/Refrigeradora-Samsung-TMF-384L-RT38DG6730S9-PE-1-351672989.jpg?v=638744710403300000",
+                        "description": "&lt;li&gt;&lt;b&gt;No aplica para retiro en tienda. Sólo delivery.&lt;/b&gt;&lt;/li&gt;&lt;li&gt;All Around Cooling&lt;/li&gt;&lt;li&gt;WiFi / SmartThings&lt;/li&gt;&lt;li&gt;Power Cool&lt;/li&gt;",
+                        "mpn": "1014689",
+                        "sku": "39283755",
+                        "offers": {
+                            "@type": "AggregateOffer",
+                            "lowPrice": 1699,
+                            "highPrice": 1699,
+                            "priceCurrency": "PEN",
+                            "offers": [
+                                {
+                                    "@type": "Offer",
+                                    "price": 1699,
+                                    "priceCurrency": "PEN",
+                                    "availability": "http://schema.org/InStock",
+                                    "sku": "39283755",
+                                    "itemCondition": "http://schema.org/NewCondition",
+                                    "priceValidUntil": "2025-10-01T14:00:00Z",
+                                    "seller": {
+                                        "@type": "Organization",
+                                        "name": "wongfood"
+                                    }
+                                }
+                            ],
+                            "offerCount": 1
+                        }
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 12,
+                    "item": {
+                        "@context": "https://schema.org/",
+                        "@type": "Product",
+                        "@id": "https://www.wong.pe/oster-licuadora-1-25-lt-blst4655-3-velocidades/p",
+                        "name": "Oster Licuadora 1.25 Lt BLST4655 3 Velocidades",
+                        "brand": {
+                            "@type": "Brand",
+                            "name": "Oster"
+                        },
+                        "image": "https://wongio.vtexassets.com/arquivos/ids/429430/Oster-Licuadora-1-25-Lt-BLST4655-3-Velocidades-1-198184674.jpg?v=637540474045100000",
+                        "description": "&lt;div id=&quot;contenidoIndexado&quot;&gt;&lt;/div&gt;",
+                        "mpn": "921106",
+                        "sku": "39169117",
+                        "offers": {
+                            "@type": "AggregateOffer",
+                            "lowPrice": 379,
+                            "highPrice": 379,
+                            "priceCurrency": "PEN",
+                            "offers": [
+                                {
+                                    "@type": "Offer",
+                                    "price": 379,
+                                    "priceCurrency": "PEN",
+                                    "availability": "http://schema.org/InStock",
+                                    "sku": "39169117",
+                                    "itemCondition": "http://schema.org/NewCondition",
+                                    "priceValidUntil": "2026-09-30T22:02:08Z",
+                                    "seller": {
+                                        "@type": "Organization",
+                                        "name": "wongfood"
+                                    }
+                                }
+                            ],
+                            "offerCount": 1
+                        }
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 13,
+                    "item": {
+                        "@context": "https://schema.org/",
+                        "@type": "Product",
+                        "@id": "https://www.wong.pe/horno-microondas-oster-pogge3702-989829-2/p",
+                        "name": "Horno Microondas Oster POGGE3702",
+                        "brand": {
+                            "@type": "Brand",
+                            "name": "Oster"
+                        },
+                        "image": "https://wongio.vtexassets.com/arquivos/ids/630001/Horno-Microondas-Oster-POGGE3702-1-351647965.jpg?v=638181494505430000",
+                        "description": "&lt;li&gt;&lt;b&gt;No aplica para retiro en tienda. Sólo delivery.&lt;/b&gt;&lt;/li&gt;&lt;li&gt;700W de Potencia&lt;/li&gt;&lt;li&gt;Control Digital&lt;/li&gt;&lt;li&gt;Función de Descongelado&lt;/li&gt;",
+                        "mpn": "989829",
+                        "sku": "39265844",
+                        "offers": {
+                            "@type": "AggregateOffer",
+                            "lowPrice": 279,
+                            "highPrice": 279,
+                            "priceCurrency": "PEN",
+                            "offers": [
+                                {
+                                    "@type": "Offer",
+                                    "price": 279,
+                                    "priceCurrency": "PEN",
+                                    "availability": "http://schema.org/InStock",
+                                    "sku": "39265844",
+                                    "itemCondition": "http://schema.org/NewCondition",
+                                    "priceValidUntil": "2026-09-30T22:09:20Z",
+                                    "seller": {
+                                        "@type": "Organization",
+                                        "name": "wongfood"
+                                    }
+                                }
+                            ],
+                            "offerCount": 1
+                        }
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 14,
+                    "item": {
+                        "@context": "https://schema.org/",
+                        "@type": "Product",
+                        "@id": "https://www.wong.pe/oster-hervidor-electrico-bvstkt3101-1-7-lt/p",
+                        "name": "Oster Hervidor Eléctrico BVSTKT3101 1.7 Lt",
+                        "brand": {
+                            "@type": "Brand",
+                            "name": "Oster"
+                        },
+                        "image": "https://wongio.vtexassets.com/arquivos/ids/453565/Oster-Hervidor-El-ctrico-BVSTKT3101-1-7-Lt-1-206716413.jpg?v=637612138416100000",
+                        "description": "&lt;li&gt;&lt;b&gt;No aplica para retiro en tienda. Sólo delivery.&lt;/b&gt;&lt;/li&gt;&lt;p&gt;- Potencia de 1850 watts&lt;/p&gt;&lt;p&gt;- Capacidad de 1.7 litros&lt;/p&gt;&lt;p&gt;- Filtro para eliminar impurezas&lt;/p&gt;&lt;p&gt;- Apagado automático&lt;/p&gt;&lt;p&gt;- Malla fina removible&lt;/p&gt;&lt;p&gt;- Tapa de seguridad&lt;/p&gt;&lt;p&gt;- Base desmontable con giro de 360º&lt;/p&gt;&lt;p&gt;- Compartimiento para cable&lt;/p&gt;&lt;p&gt;- Base antideslizante&lt;/p&gt;",
+                        "mpn": "930350",
+                        "sku": "39175181",
+                        "offers": {
+                            "@type": "AggregateOffer",
+                            "lowPrice": 59.9,
+                            "highPrice": 59.9,
+                            "priceCurrency": "PEN",
+                            "offers": [
+                                {
+                                    "@type": "Offer",
+                                    "price": 59.9,
+                                    "priceCurrency": "PEN",
+                                    "availability": "http://schema.org/InStock",
+                                    "sku": "39175181",
+                                    "itemCondition": "http://schema.org/NewCondition",
+                                    "priceValidUntil": "2026-09-30T22:05:41Z",
+                                    "seller": {
+                                        "@type": "Organization",
+                                        "name": "wongfood"
+                                    }
+                                }
+                            ],
+                            "offerCount": 1
+                        }
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 15,
+                    "item": {
+                        "@context": "https://schema.org/",
+                        "@type": "Product",
+                        "@id": "https://www.wong.pe/oster-licuadora-blst3a-r2g-053/p",
+                        "name": "Oster Licuadora BLST3A-R2G-053",
+                        "brand": {
+                            "@type": "Brand",
+                            "name": "Oster"
+                        },
+                        "image": "https://wongio.vtexassets.com/arquivos/ids/172568/image-fab49dd012aa4a7eaa4c6d016b29c936.jpg?v=636440009021400000",
+                        "description": "&lt;p&gt;- Tecnología de motor reversible&lt;/p&gt;&lt;p&gt;- Cuenta con 3 programas automáticos&lt;/p&gt;&lt;p&gt;- Sistema de cuchillas multiples 3 en 1&lt;/p&gt;&lt;a href=&quot;#wong_ver_mas&quot;&gt;- ver más&lt;/a&gt;",
+                        "mpn": "701620",
+                        "sku": "19272",
+                        "offers": {
+                            "@type": "AggregateOffer",
+                            "lowPrice": 699,
+                            "highPrice": 699,
+                            "priceCurrency": "PEN",
+                            "offers": [
+                                {
+                                    "@type": "Offer",
+                                    "price": 699,
+                                    "priceCurrency": "PEN",
+                                    "availability": "http://schema.org/InStock",
+                                    "sku": "19272",
+                                    "itemCondition": "http://schema.org/NewCondition",
+                                    "priceValidUntil": "2026-09-30T22:05:41Z",
+                                    "seller": {
+                                        "@type": "Organization",
+                                        "name": "wongfood"
+                                    }
+                                }
+                            ],
+                            "offerCount": 1
+                        }
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 16,
+                    "item": {
+                        "@context": "https://schema.org/",
+                        "@type": "Product",
+                        "@id": "https://www.wong.pe/lavadora-midea-automatica-carga-superior-10kg-gris-1033525/p",
+                        "name": "Lavadora Midea Automática Carga Superior 10Kg Gris",
+                        "brand": {
+                            "@type": "Brand",
+                            "name": "Midea"
+                        },
+                        "image": "https://wongio.vtexassets.com/arquivos/ids/780100/LAVADORA-10KG-GRIS-MA200W100G-PE-3-351691897.jpg?v=638887241490300000",
+                        "description": "&lt;li&gt;HealthGuard - Auto Clean y Hihyene+&lt;/li&gt;&lt;li&gt;Lunar Display&lt;/li&gt;&lt;li&gt;Función AirFresh&lt;/li&gt;",
+                        "mpn": "1033525",
+                        "sku": "39311287",
+                        "offers": {
+                            "@type": "AggregateOffer",
+                            "lowPrice": 599,
+                            "highPrice": 599,
+                            "priceCurrency": "PEN",
+                            "offers": [
+                                {
+                                    "@type": "Offer",
+                                    "price": 599,
+                                    "priceCurrency": "PEN",
+                                    "availability": "http://schema.org/InStock",
+                                    "sku": "39311287",
+                                    "itemCondition": "http://schema.org/NewCondition",
+                                    "priceValidUntil": "2026-09-30T22:10:41Z",
+                                    "seller": {
+                                        "@type": "Organization",
+                                        "name": "wongfood"
+                                    }
+                                }
+                            ],
+                            "offerCount": 1
+                        }
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 17,
+                    "item": {
+                        "@context": "https://schema.org/",
+                        "@type": "Product",
+                        "@id": "https://www.wong.pe/frigobar-midea-2-puertas-silver-87lts-1033518/p",
+                        "name": "Frigobar Midea 2 puertas Silver 87lts",
+                        "brand": {
+                            "@type": "Brand",
+                            "name": "Midea"
+                        },
+                        "image": "https://wongio.vtexassets.com/arquivos/ids/780084/FRIGOBAR-2PTS-LOW-FROST-MRTD04A4NPAAL-3-351691892.jpg?v=638887240217000000",
+                        "description": "&lt;li&gt;Congelador Low Frost&lt;/li&gt;&lt;li&gt;Fresh Box&lt;/li&gt;&lt;li&gt;Repisas Extreme Trust&lt;/li&gt;",
+                        "mpn": "1033518",
+                        "sku": "39311282",
+                        "offers": {
+                            "@type": "AggregateOffer",
+                            "lowPrice": 449,
+                            "highPrice": 449,
+                            "priceCurrency": "PEN",
+                            "offers": [
+                                {
+                                    "@type": "Offer",
+                                    "price": 449,
+                                    "priceCurrency": "PEN",
+                                    "availability": "http://schema.org/InStock",
+                                    "sku": "39311282",
+                                    "itemCondition": "http://schema.org/NewCondition",
+                                    "priceValidUntil": "2026-09-30T22:10:41Z",
+                                    "seller": {
+                                        "@type": "Organization",
+                                        "name": "wongfood"
+                                    }
+                                }
+                            ],
+                            "offerCount": 1
+                        }
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 18,
+                    "item": {
+                        "@context": "https://schema.org/",
+                        "@type": "Product",
+                        "@id": "https://www.wong.pe/lavadora-lg-wt13wpbk-13kg-blanco-1005680/p",
+                        "name": "Lavadora Carga Superior LG WT13WPBK 13kg Smart Motion Blanco",
+                        "brand": {
+                            "@type": "Brand",
+                            "name": "LG"
+                        },
+                        "image": "https://wongio.vtexassets.com/arquivos/ids/680835/1005680-1.jpg?v=638380416746800000",
+                        "description": "&lt;li&gt;&lt;b&gt;No aplica para retiro en tienda. Sólo delivery.&lt;/b&gt;&lt;/li&gt;&lt;li&gt;Sistema de lavado TurboDrum LG.&lt;/li&gt;&lt;li&gt;Tecnología Smart Inverter LG&lt;/li&gt;&lt;li&gt;Función Auto Pre Lavado para quitar las manchas más difíciles.&lt;/li&gt;",
+                        "mpn": "1005680",
+                        "sku": "39277804",
+                        "offers": {
+                            "@type": "AggregateOffer",
+                            "lowPrice": 1099,
+                            "highPrice": 1099,
+                            "priceCurrency": "PEN",
+                            "offers": [
+                                {
+                                    "@type": "Offer",
+                                    "price": 1099,
+                                    "priceCurrency": "PEN",
+                                    "availability": "http://schema.org/InStock",
+                                    "sku": "39277804",
+                                    "itemCondition": "http://schema.org/NewCondition",
+                                    "priceValidUntil": "2026-09-30T22:09:20Z",
+                                    "seller": {
+                                        "@type": "Organization",
+                                        "name": "wongfood"
+                                    }
+                                }
+                            ],
+                            "offerCount": 1
+                        }
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 19,
+                    "item": {
+                        "@context": "https://schema.org/",
+                        "@type": "Product",
+                        "@id": "https://www.wong.pe/estufa-conveccion-electrica-nex-blanco-1029763/p",
+                        "name": "Estufa Convección Eléctrica Nex Blanco",
+                        "brand": {
+                            "@type": "Brand",
+                            "name": "NEX"
+                        },
+                        "image": "https://wongio.vtexassets.com/arquivos/ids/769184/Convector-El-ctrico-Nex-Blanco-1-351687106.jpg?v=638826898108600000",
+                        "description": "&lt;li&gt;Potencia: 2000 Watts&lt;/li&gt;&lt;li&gt;Termostato ajustable mecánico&lt;/li&gt;&lt;li&gt;Luz indicadora de encendido&lt;/li&gt;&lt;li&gt;Protector de sobrecalentamiento&lt;/li&gt;&lt;li&gt;3 Niveles de temperatura: 750W | 1250W | 2000W&lt;/li&gt;&lt;li&gt;Corte térmico de seguridad&lt;/li&gt;&lt;li&gt;Voltaje: 220-240V&lt;/li&gt;&lt;li&gt;Incluye montaje a muro&lt;/li&gt;",
+                        "mpn": "1029763",
+                        "sku": "39305794",
+                        "offers": {
+                            "@type": "AggregateOffer",
+                            "lowPrice": 49.9,
+                            "highPrice": 49.9,
+                            "priceCurrency": "PEN",
+                            "offers": [
+                                {
+                                    "@type": "Offer",
+                                    "price": 49.9,
+                                    "priceCurrency": "PEN",
+                                    "availability": "http://schema.org/InStock",
+                                    "sku": "39305794",
+                                    "itemCondition": "http://schema.org/NewCondition",
+                                    "priceValidUntil": "2026-09-30T22:10:41Z",
+                                    "seller": {
+                                        "@type": "Organization",
+                                        "name": "wongfood"
+                                    }
+                                }
+                            ],
+                            "offerCount": 1
+                        }
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 20,
+                    "item": {
+                        "@context": "https://schema.org/",
+                        "@type": "Product",
+                        "@id": "https://www.wong.pe/oster-licuadora-1-5-lt-blstkagvpb-2-velocidades/p",
+                        "name": "Oster Licuadora 1.5 Lt BLSTKAGVPB 2 Velocidades",
+                        "brand": {
+                            "@type": "Brand",
+                            "name": "Oster"
+                        },
+                        "image": "https://wongio.vtexassets.com/arquivos/ids/429431/Oster-Licuadora-1-5-Lt-BLSTKAGVPB-2-Velocidades-1-198184675.jpg?v=637540474047600000",
+                        "description": "&lt;li&gt;&lt;b&gt;No aplica para retiro en tienda. Sólo delivery.&lt;/b&gt;&lt;/li&gt;&lt;p&gt;- Potencia de 550 watts&lt;/p&gt;&lt;p&gt;- Capacidad de 1.5 litros&lt;/p&gt;&lt;p&gt;- Número de velocidades: 2 + Pulse&lt;/p&gt;&lt;p&gt;- Cuchilla trituradora de hielo&lt;/p&gt;&lt;p&gt;- Acople metálico 10 veces más fuerte&lt;/p&gt;&lt;p&gt;- Vaso en vidrio refractario&lt;/p&gt;&lt;p&gt;- Cuchillas en acero inoxidable&lt;/p&gt;&lt;p&gt;- Libre de BPA&lt;/p&gt;&lt;p&gt;- Material en plástico de alto impacto&lt;/p&gt;&lt;p&gt;- Base antideslizante&lt;/p&gt;",
+                        "mpn": "921107",
+                        "sku": "39169118",
+                        "offers": {
+                            "@type": "AggregateOffer",
+                            "lowPrice": 169,
+                            "highPrice": 169,
+                            "priceCurrency": "PEN",
+                            "offers": [
+                                {
+                                    "@type": "Offer",
+                                    "price": 169,
+                                    "priceCurrency": "PEN",
+                                    "availability": "http://schema.org/InStock",
+                                    "sku": "39169118",
+                                    "itemCondition": "http://schema.org/NewCondition",
+                                    "priceValidUntil": "2026-09-30T22:05:41Z",
+                                    "seller": {
+                                        "@type": "Organization",
+                                        "name": "wongfood"
+                                    }
+                                }
+                            ],
+                            "offerCount": 1
+                        }
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 21,
+                    "item": {
+                        "@context": "https://schema.org/",
+                        "@type": "Product",
+                        "@id": "https://www.wong.pe/refrigeradora-top-freezer-lg-gt37sgp-374l-door-cooling-plateado-957796/p",
+                        "name": "Refrigeradora Top Freezer LG GT37SGP 374L Door Cooling Plateado",
+                        "brand": {
+                            "@type": "Brand",
+                            "name": "LG"
+                        },
+                        "image": "https://wongio.vtexassets.com/arquivos/ids/759455/957796-1.jpg.jpg?v=638781573196670000",
+                        "description": "&lt;li&gt;&lt;b&gt;No aplica para retiro en tienda. Sólo delivery.&lt;/b&gt;&lt;/li&gt;&lt;li&gt;Door Cooling&lt;/li&gt;&lt;li&gt;Hygiene Fresh&lt;/li&gt;&lt;li&gt;ThinQ Conectividad Wi-Fi&lt;/li&gt;",
+                        "mpn": "957796",
+                        "sku": "39249116",
+                        "offers": {
+                            "@type": "AggregateOffer",
+                            "lowPrice": 1799,
+                            "highPrice": 1799,
+                            "priceCurrency": "PEN",
+                            "offers": [
+                                {
+                                    "@type": "Offer",
+                                    "price": 1799,
+                                    "priceCurrency": "PEN",
+                                    "availability": "http://schema.org/InStock",
+                                    "sku": "39249116",
+                                    "itemCondition": "http://schema.org/NewCondition",
+                                    "priceValidUntil": "2025-10-01T14:00:00Z",
+                                    "seller": {
+                                        "@type": "Organization",
+                                        "name": "wongfood"
+                                    }
+                                }
+                            ],
+                            "offerCount": 1
+                        }
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 22,
+                    "item": {
+                        "@context": "https://schema.org/",
+                        "@type": "Product",
+                        "@id": "https://www.wong.pe/cocina-de-piso-6-quemadores-76cm-negro-mabe-cmp3020fn1-1035264/p",
+                        "name": "Cocina de Piso 6 Quemadores 76cm Negro Mabe CMP3020FN1",
+                        "brand": {
+                            "@type": "Brand",
+                            "name": "Mabe"
+                        },
+                        "image": "https://wongio.vtexassets.com/arquivos/ids/784693/Cocina-de-Piso-6-Quemadores-76cm-Negro-Mabe-CMP3020FN1-1-351693761.jpg?v=638906460203330000",
+                        "description": "&lt;li&gt;Parrillas superiores de hierro fundido con máxima estabilidad.&lt;/li&gt;&lt;li&gt;Fácil encendido electrónico que te brinda mayor seguridad y practicidad.&lt;/li&gt;&lt;li&gt;Recubrimiento interior Easy Clean Pro, limpia tan fácil como un vidrio.&lt;/li&gt;",
+                        "mpn": "1035264",
+                        "sku": "39313219",
+                        "offers": {
+                            "@type": "AggregateOffer",
+                            "lowPrice": 1199,
+                            "highPrice": 1199,
+                            "priceCurrency": "PEN",
+                            "offers": [
+                                {
+                                    "@type": "Offer",
+                                    "price": 1199,
+                                    "priceCurrency": "PEN",
+                                    "availability": "http://schema.org/InStock",
+                                    "sku": "39313219",
+                                    "itemCondition": "http://schema.org/NewCondition",
+                                    "priceValidUntil": "2025-10-01T14:00:00Z",
+                                    "seller": {
+                                        "@type": "Organization",
+                                        "name": "wongfood"
+                                    }
+                                }
+                            ],
+                            "offerCount": 1
+                        }
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 23,
+                    "item": {
+                        "@context": "https://schema.org/",
+                        "@type": "Product",
+                        "@id": "https://www.wong.pe/cafetera-espresso-specialista-delonghi-arte-manual-2/p",
+                        "name": "Cafetera Espresso Specialista Delonghi Arte Manual",
+                        "brand": {
+                            "@type": "Brand",
+                            "name": "Delonghi"
+                        },
+                        "image": "https://wongio.vtexassets.com/arquivos/ids/607064/Cafetera-Espresso-Specialista-Delonghi-Arte-Manual-1-351640944.jpg?v=638077595029270000",
+                        "description": "&lt;li&gt;&lt;b&gt;No aplica para retiro en tienda. Sólo delivery.&lt;/b&gt;&lt;/li&gt;&lt;li&gt;Presión de la bomba: 15 bares&lt;/li&gt;&lt;li&gt;Funciones: Espresso, Americano/Long Black, Hot Water&lt;/li&gt;&lt;li&gt;8 ajustes de molienda&lt;/li&gt;",
+                        "mpn": "982330",
+                        "sku": "39255981",
+                        "offers": {
+                            "@type": "AggregateOffer",
+                            "lowPrice": 2999,
+                            "highPrice": 2999,
+                            "priceCurrency": "PEN",
+                            "offers": [
+                                {
+                                    "@type": "Offer",
+                                    "price": 2999,
+                                    "priceCurrency": "PEN",
+                                    "availability": "http://schema.org/InStock",
+                                    "sku": "39255981",
+                                    "itemCondition": "http://schema.org/NewCondition",
+                                    "priceValidUntil": "2026-09-30T22:05:41Z",
+                                    "seller": {
+                                        "@type": "Organization",
+                                        "name": "wongfood"
+                                    }
+                                }
+                            ],
+                            "offerCount": 1
+                        }
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 24,
+                    "item": {
+                        "@context": "https://schema.org/",
+                        "@type": "Product",
+                        "@id": "https://www.wong.pe/hervidor-thomas-th-5408i-2200w-1-8-l-cuerpo-acero-inoxidable-1023341/p",
+                        "name": "Hervidor Thomas TH-5408I 2200W 1.8L Cuerpo Acero Inoxidable",
+                        "brand": {
+                            "@type": "Brand",
+                            "name": "Thomas"
+                        },
+                        "image": "https://wongio.vtexassets.com/arquivos/ids/725199/HERVIDOR-TH-5408I-1-351679042.jpg?v=638622031902370000",
+                        "description": "&lt;li&gt;&lt;b&gt;No aplica para retiro en tienda. Sólo delivery.&lt;/b&gt;&lt;/li&gt;&lt;li&gt;Base interior de acero inoxidable |Base desmontable con giro de 360º&lt;/li&gt;&lt;li&gt;Indicador de llenado y tapa interior BPA FREE&lt;/li&gt;&lt;li&gt;Sistema de seguridad de funcionamiento en seco y apagado automático &lt;/li&gt;",
+                        "mpn": "1024431",
+                        "sku": "39297014",
+                        "offers": {
+                            "@type": "AggregateOffer",
+                            "lowPrice": 89,
+                            "highPrice": 89,
+                            "priceCurrency": "PEN",
+                            "offers": [
+                                {
+                                    "@type": "Offer",
+                                    "price": 89,
+                                    "priceCurrency": "PEN",
+                                    "availability": "http://schema.org/InStock",
+                                    "sku": "39297014",
+                                    "itemCondition": "http://schema.org/NewCondition",
+                                    "priceValidUntil": "2026-09-30T22:04:45Z",
+                                    "seller": {
+                                        "@type": "Organization",
+                                        "name": "wongfood"
+                                    }
+                                }
+                            ],
+                            "offerCount": 1
+                        }
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 25,
+                    "item": {
+                        "@context": "https://schema.org/",
+                        "@type": "Product",
+                        "@id": "https://www.wong.pe/cafetera-superautomatica-delonghi-magnific-evo-latte-2/p",
+                        "name": "Cafetera Superautomatica Delonghi Magnific Evo Latte",
+                        "brand": {
+                            "@type": "Brand",
+                            "name": "Delonghi"
+                        },
+                        "image": "https://wongio.vtexassets.com/arquivos/ids/607060/Cafetera-Superautomatica-Delonghi-Magnific-Evo-Latte-1-351640941.jpg?v=638077595020970000",
+                        "description": "&lt;li&gt;&lt;b&gt;No aplica para retiro en tienda. Sólo delivery.&lt;/b&gt;&lt;/li&gt;&lt;li&gt;Disfrute de la suave textura de la densa y cremosa espuma de leche &lt;/li&gt;&lt;li&gt;Presión de la bomba: 15 bares&lt;/li&gt;&lt;li&gt;Capacidad del recipiente de granos: 250 g &lt;/li&gt;",
+                        "mpn": "982326",
+                        "sku": "39255978",
+                        "offers": {
+                            "@type": "AggregateOffer",
+                            "lowPrice": 3599,
+                            "highPrice": 3599,
+                            "priceCurrency": "PEN",
+                            "offers": [
+                                {
+                                    "@type": "Offer",
+                                    "price": 3599,
+                                    "priceCurrency": "PEN",
+                                    "availability": "http://schema.org/InStock",
+                                    "sku": "39255978",
+                                    "itemCondition": "http://schema.org/NewCondition",
+                                    "priceValidUntil": "2026-09-30T22:05:41Z",
+                                    "seller": {
+                                        "@type": "Organization",
+                                        "name": "wongfood"
+                                    }
+                                }
+                            ],
+                            "offerCount": 1
+                        }
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 26,
+                    "item": {
+                        "@context": "https://schema.org/",
+                        "@type": "Product",
+                        "@id": "https://www.wong.pe/refrigeradora-midea-2-puertas-no-frost-inverter-409l-1041791/p",
+                        "name": "Refrigeradora Midea 2 puertas No Frost Inverter 409L",
+                        "brand": {
+                            "@type": "Brand",
+                            "name": "Midea"
+                        },
+                        "image": "https://wongio.vtexassets.com/arquivos/ids/779217/Refrigeradora-Midea-2-puertas-No-Frost-Inverter-409L-1-351699153.jpg?v=638883705692000000",
+                        "description": "&lt;li&gt;Inverter Quattro: Tecnología inverter&lt;/li&gt;&lt;li&gt;Multi Air Flow&lt;/li&gt;&lt;li&gt;Control de temperatura interno&lt;/li&gt;",
+                        "mpn": "1041791",
+                        "sku": "39320014",
+                        "offers": {
+                            "@type": "AggregateOffer",
+                            "lowPrice": 1399,
+                            "highPrice": 1399,
+                            "priceCurrency": "PEN",
+                            "offers": [
+                                {
+                                    "@type": "Offer",
+                                    "price": 1399,
+                                    "priceCurrency": "PEN",
+                                    "availability": "http://schema.org/InStock",
+                                    "sku": "39320014",
+                                    "itemCondition": "http://schema.org/NewCondition",
+                                    "priceValidUntil": "2026-09-30T22:10:41Z",
+                                    "seller": {
+                                        "@type": "Organization",
+                                        "name": "wongfood"
+                                    }
+                                }
+                            ],
+                            "offerCount": 1
+                        }
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 27,
+                    "item": {
+                        "@context": "https://schema.org/",
+                        "@type": "Product",
+                        "@id": "https://www.wong.pe/refrigeradora-hisense-top-mount-205l-rd267h-defrost-1019485/p",
+                        "name": "Refrigeradora Hisense Top Mount 205L RD267H Desfrost",
+                        "brand": {
+                            "@type": "Brand",
+                            "name": "Hisense"
+                        },
+                        "image": "https://wongio.vtexassets.com/arquivos/ids/749087/Refrigeradora-Hisense-Top-Mount-205L-RD267H-Desfrost-Refrigeradora-Hisense-Top-Mount-205L-RD267H-Defrost-1-351676954.jpg?v=638730022273130000",
+                        "description": "&lt;li&gt;&lt;b&gt;No aplica para retiro en tienda. Sólo delivery.&lt;/b&gt;&lt;/li&gt;&lt;li&gt;Dispensador de agua&lt;/li&gt;&lt;li&gt;Iluminación LED&lt;/li&gt;&lt;li&gt;Bandejas ajustables&lt;/li&gt;",
+                        "mpn": "1019485",
+                        "sku": "39291582",
+                        "offers": {
+                            "@type": "AggregateOffer",
+                            "lowPrice": 799,
+                            "highPrice": 799,
+                            "priceCurrency": "PEN",
+                            "offers": [
+                                {
+                                    "@type": "Offer",
+                                    "price": 799,
+                                    "priceCurrency": "PEN",
+                                    "availability": "http://schema.org/InStock",
+                                    "sku": "39291582",
+                                    "itemCondition": "http://schema.org/NewCondition",
+                                    "priceValidUntil": "2026-09-30T22:10:41Z",
+                                    "seller": {
+                                        "@type": "Organization",
+                                        "name": "wongfood"
+                                    }
+                                }
+                            ],
+                            "offerCount": 1
+                        }
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 28,
+                    "item": {
+                        "@context": "https://schema.org/",
+                        "@type": "Product",
+                        "@id": "https://www.wong.pe/lavadora-samsung-ai-wash-ecobubble-21kg-negra-1038071/p",
+                        "name": "Lavadora Samsung AI Wash EcoBubble 21kg Negra",
+                        "brand": {
+                            "@type": "Brand",
+                            "name": "Samsung"
+                        },
+                        "image": "https://wongio.vtexassets.com/arquivos/ids/780923/Lavadora-Samsung-AI-Wash-EcoBubble-21kg-Negra-1-351694492.jpg?v=638890726128230000",
+                        "description": "&lt;li&gt;AI Wash&lt;/li&gt;&lt;li&gt; SmartThing con AI Energy mode&lt;/li&gt;&lt;li&gt;Ecobubble?&lt;/li&gt;",
+                        "mpn": "1038071",
+                        "sku": "39313990",
+                        "offers": {
+                            "@type": "AggregateOffer",
+                            "lowPrice": 2599,
+                            "highPrice": 2599,
+                            "priceCurrency": "PEN",
+                            "offers": [
+                                {
+                                    "@type": "Offer",
+                                    "price": 2599,
+                                    "priceCurrency": "PEN",
+                                    "availability": "http://schema.org/InStock",
+                                    "sku": "39313990",
+                                    "itemCondition": "http://schema.org/NewCondition",
+                                    "priceValidUntil": "2026-09-30T22:10:20Z",
+                                    "seller": {
+                                        "@type": "Organization",
+                                        "name": "wongfood"
+                                    }
+                                }
+                            ],
+                            "offerCount": 1
+                        }
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 29,
+                    "item": {
+                        "@context": "https://schema.org/",
+                        "@type": "Product",
+                        "@id": "https://www.wong.pe/cocina-indurama-florencia-zafiro-4-quemadores-croma-969646-2/p",
+                        "name": "Cocina Indurama Florencia Zafiro 4 Quemadores Croma",
+                        "brand": {
+                            "@type": "Brand",
+                            "name": "Indurama"
+                        },
+                        "image": "https://wongio.vtexassets.com/arquivos/ids/570492/Cocina-Indurama-Florencia-Zafiro-Croma-1-335839210.jpg?v=637951490617600000",
+                        "description": "&lt;li&gt;&lt;b&gt;No aplica para retiro en tienda. Sólo delivery.&lt;/b&gt;&lt;/li&gt;&lt;li&gt;Número de quemadores: 4&lt;/li&gt;&lt;li&gt;Tipo de Cocina: Gas&lt;/li&gt;&lt;li&gt;Control Touch&lt;/li&gt;",
+                        "mpn": "969646",
+                        "sku": "39210919",
+                        "offers": {
+                            "@type": "AggregateOffer",
+                            "lowPrice": 1399,
+                            "highPrice": 1399,
+                            "priceCurrency": "PEN",
+                            "offers": [
+                                {
+                                    "@type": "Offer",
+                                    "price": 1399,
+                                    "priceCurrency": "PEN",
+                                    "availability": "http://schema.org/InStock",
+                                    "sku": "39210919",
+                                    "itemCondition": "http://schema.org/NewCondition",
+                                    "priceValidUntil": "2025-10-01T14:00:00Z",
+                                    "seller": {
+                                        "@type": "Organization",
+                                        "name": "wongfood"
+                                    }
+                                }
+                            ],
+                            "offerCount": 1
+                        }
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 30,
+                    "item": {
+                        "@context": "https://schema.org/",
+                        "@type": "Product",
+                        "@id": "https://www.wong.pe/sandwichera-compacta-con-platos-hondos-ckstsm400-oster/p",
+                        "name": "Sandwichera compacta con platos hondos CKSTSM400 Oster",
+                        "brand": {
+                            "@type": "Brand",
+                            "name": "Oster"
+                        },
+                        "image": "https://wongio.vtexassets.com/arquivos/ids/733743/Sandwichera-Oster-Platos-Hondos-1-351684355.jpg?v=638658421974430000",
+                        "description": "&lt;li&gt;Más capacidad y versatilidad&lt;/li&gt;&lt;li&gt;Fácil de limpiar&lt;/li&gt;&lt;li&gt;Placas antiadherentes&lt;/li&gt;",
+                        "mpn": "1026989",
+                        "sku": "39302312",
+                        "offers": {
+                            "@type": "AggregateOffer",
+                            "lowPrice": 89,
+                            "highPrice": 89,
+                            "priceCurrency": "PEN",
+                            "offers": [
+                                {
+                                    "@type": "Offer",
+                                    "price": 89,
+                                    "priceCurrency": "PEN",
+                                    "availability": "http://schema.org/InStock",
+                                    "sku": "39302312",
+                                    "itemCondition": "http://schema.org/NewCondition",
+                                    "priceValidUntil": "2026-09-30T22:10:42Z",
+                                    "seller": {
+                                        "@type": "Organization",
+                                        "name": "wongfood"
+                                    }
+                                }
+                            ],
+                            "offerCount": 1
+                        }
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 31,
+                    "item": {
+                        "@context": "https://schema.org/",
+                        "@type": "Product",
+                        "@id": "https://www.wong.pe/freidora-de-aire-digital-recubrimiento-diamondforce-6l-con-ventana-ckstaf60wddf-oster/p",
+                        "name": "Freidora de Aire Digital Recubrimiento DiamondForce 6L con Ventana CKSTAF60WDDF Oster",
+                        "brand": {
+                            "@type": "Brand",
+                            "name": "Oster"
+                        },
+                        "image": "https://wongio.vtexassets.com/arquivos/ids/725193/Freidora-de-Aire-Oster-6L-con-Ventana-1-351677738.jpg?v=638622030081400000",
+                        "description": "&lt;li&gt;&lt;b&gt;No aplica para retiro en tienda. Sólo delivery.&lt;/b&gt;&lt;/li&gt;&lt;li&gt;Ventana de visualización con luz&lt;/li&gt;&lt;li&gt;Panel digital&lt;/li&gt;&lt;li&gt;Recubrimiento DiamondForce&lt;/li&gt;",
+                        "mpn": "1022141",
+                        "sku": "39294587",
+                        "offers": {
+                            "@type": "AggregateOffer",
+                            "lowPrice": 359,
+                            "highPrice": 359,
+                            "priceCurrency": "PEN",
+                            "offers": [
+                                {
+                                    "@type": "Offer",
+                                    "price": 359,
+                                    "priceCurrency": "PEN",
+                                    "availability": "http://schema.org/InStock",
+                                    "sku": "39294587",
+                                    "itemCondition": "http://schema.org/NewCondition",
+                                    "priceValidUntil": "2026-09-30T22:13:40Z",
+                                    "seller": {
+                                        "@type": "Organization",
+                                        "name": "wongfood"
+                                    }
+                                }
+                            ],
+                            "offerCount": 1
+                        }
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 32,
+                    "item": {
+                        "@context": "https://schema.org/",
+                        "@type": "Product",
+                        "@id": "https://www.wong.pe/nex-olla-arrocera-0-6l-st20630-1003456/p",
+                        "name": "Nex Olla Arrocera 0.6L ST20630",
+                        "brand": {
+                            "@type": "Brand",
+                            "name": "NEX"
+                        },
+                        "image": "https://wongio.vtexassets.com/arquivos/ids/723963/Nex-Olla-Arrocera-0-6L-ST20630-1-351660552.jpg?v=638616945827970000",
+                        "description": "&lt;li&gt;&lt;b&gt;No aplica para retiro en tienda. Sólo delivery.&lt;/b&gt;&lt;/li&gt;&lt;li&gt;Capacidad: 0.6 litros&lt;/li&gt;&lt;li&gt;Potencia de 350 watts&lt;/li&gt;&lt;li&gt;Control de encendido manual&lt;/li&gt;&lt;li&gt;Cubierta antiadherente&lt;/li&gt;&lt;li&gt;Tapa de vidrio refractario con ventilación&lt;/li&gt;&lt;li&gt;Incluye: Cuchara medidora&lt;/li&gt;",
+                        "mpn": "1003456",
+                        "sku": "39273458",
+                        "offers": {
+                            "@type": "AggregateOffer",
+                            "lowPrice": 39.9,
+                            "highPrice": 39.9,
+                            "priceCurrency": "PEN",
+                            "offers": [
+                                {
+                                    "@type": "Offer",
+                                    "price": 39.9,
+                                    "priceCurrency": "PEN",
+                                    "availability": "http://schema.org/InStock",
+                                    "sku": "39273458",
+                                    "itemCondition": "http://schema.org/NewCondition",
+                                    "priceValidUntil": "2026-09-30T22:09:20Z",
+                                    "seller": {
+                                        "@type": "Organization",
+                                        "name": "wongfood"
+                                    }
+                                }
+                            ],
+                            "offerCount": 1
+                        }
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 33,
+                    "item": {
+                        "@context": "https://schema.org/",
+                        "@type": "Product",
+                        "@id": "https://www.wong.pe/lavadora-automatica-indurama-lri-13bla-1026921/p",
+                        "name": "Lavadora Automatica Indurama LRI-13BLA",
+                        "brand": {
+                            "@type": "Brand",
+                            "name": "Indurama"
+                        },
+                        "image": "https://wongio.vtexassets.com/arquivos/ids/734179/LAVADORA-AUTOMATICA-LRI-13BLA-1-351684277.jpg?v=638663498657200000",
+                        "description": "&lt;li&gt;Tecnología anti-enredo.&lt;/li&gt;&lt;li&gt;Filtro atrapa pelusas&lt;/li&gt;&lt;li&gt;8 programas de lavado&lt;/li&gt;",
+                        "mpn": "1026921",
+                        "sku": "39302168",
+                        "offers": {
+                            "@type": "AggregateOffer",
+                            "lowPrice": 799,
+                            "highPrice": 799,
+                            "priceCurrency": "PEN",
+                            "offers": [
+                                {
+                                    "@type": "Offer",
+                                    "price": 799,
+                                    "priceCurrency": "PEN",
+                                    "availability": "http://schema.org/InStock",
+                                    "sku": "39302168",
+                                    "itemCondition": "http://schema.org/NewCondition",
+                                    "priceValidUntil": "2025-10-01T14:00:00Z",
+                                    "seller": {
+                                        "@type": "Organization",
+                                        "name": "wongfood"
+                                    }
+                                }
+                            ],
+                            "offerCount": 1
+                        }
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 34,
+                    "item": {
+                        "@context": "https://schema.org/",
+                        "@type": "Product",
+                        "@id": "https://www.wong.pe/lavadora-automatica-midea-panel-posterior-18kg-1037511/p",
+                        "name": "Lavadora Automática Midea Panel Posterior 18kg",
+                        "brand": {
+                            "@type": "Brand",
+                            "name": "Midea"
+                        },
+                        "image": "https://wongio.vtexassets.com/arquivos/ids/780088/Lavadora-Autom-tica-Midea-Panel-Posterior-18kg-Lavadora-Autom-tica-Midea-Panel-Posterior-18kg-3-351698170.jpg?v=638887240645500000",
+                        "description": "&lt;li&gt;Auto Clean y Hihyene+: Limpieza de tina y Esteriliza tu  lavado&lt;/li&gt;&lt;li&gt;Tina 100% de acero inoxidable&lt;/li&gt;&lt;li&gt;13 Programas de Lavado predeterminados.&lt;/li&gt;",
+                        "mpn": "1037511",
+                        "sku": "39318987",
+                        "offers": {
+                            "@type": "AggregateOffer",
+                            "lowPrice": 1099,
+                            "highPrice": 1099,
+                            "priceCurrency": "PEN",
+                            "offers": [
+                                {
+                                    "@type": "Offer",
+                                    "price": 1099,
+                                    "priceCurrency": "PEN",
+                                    "availability": "http://schema.org/InStock",
+                                    "sku": "39318987",
+                                    "itemCondition": "http://schema.org/NewCondition",
+                                    "priceValidUntil": "2026-09-30T22:10:41Z",
+                                    "seller": {
+                                        "@type": "Organization",
+                                        "name": "wongfood"
+                                    }
+                                }
+                            ],
+                            "offerCount": 1
+                        }
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 35,
+                    "item": {
+                        "@context": "https://schema.org/",
+                        "@type": "Product",
+                        "@id": "https://www.wong.pe/cocina-de-piso-a-gas-60cm-inox-mabe-cmp6060fx1-1037979/p",
+                        "name": "Cocina de Piso a Gas 60cm Inox Mabe CMP6060FX1",
+                        "brand": {
+                            "@type": "Brand",
+                            "name": "Mabe"
+                        },
+                        "image": "https://wongio.vtexassets.com/arquivos/ids/784718/Cocina-de-Piso-a-Gas-60cm-Inox-Mabe-CMP6060FX1-1-351694563.jpg?v=638906460321930000",
+                        "description": "&lt;li&gt;Guía de cocción en contrapuerta&lt;/li&gt;&lt;li&gt;Válvula de seguridad&lt;/li&gt;&lt;li&gt;Grill superior a gas en horno&lt;/li&gt;",
+                        "mpn": "1037979",
+                        "sku": "39314061",
+                        "offers": {
+                            "@type": "AggregateOffer",
+                            "lowPrice": 1099,
+                            "highPrice": 1099,
+                            "priceCurrency": "PEN",
+                            "offers": [
+                                {
+                                    "@type": "Offer",
+                                    "price": 1099,
+                                    "priceCurrency": "PEN",
+                                    "availability": "http://schema.org/InStock",
+                                    "sku": "39314061",
+                                    "itemCondition": "http://schema.org/NewCondition",
+                                    "priceValidUntil": "2025-10-01T14:00:00Z",
+                                    "seller": {
+                                        "@type": "Organization",
+                                        "name": "wongfood"
+                                    }
+                                }
+                            ],
+                            "offerCount": 1
+                        }
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 36,
+                    "item": {
+                        "@context": "https://schema.org/",
+                        "@type": "Product",
+                        "@id": "https://www.wong.pe/horno-grill-negro-microondas-oster-984799/p",
+                        "name": "Horno Grill Negro Microondas Oster",
+                        "brand": {
+                            "@type": "Brand",
+                            "name": "Oster"
+                        },
+                        "image": "https://wongio.vtexassets.com/arquivos/ids/634974/Horno-Grill-Negro-Microondas-Oster-1-351643777.jpg?v=638207094729270000",
+                        "description": "&lt;li&gt;&lt;b&gt;No aplica para retiro en tienda. Sólo delivery.&lt;/b&gt;&lt;/li&gt;&lt;li&gt;Función Grill&lt;/li&gt;&lt;li&gt;6 Programas de cocción especializados&lt;/li&gt;&lt;li&gt;10 Niveles de potencia&lt;/li&gt;",
+                        "mpn": "984799",
+                        "sku": "39259985",
+                        "offers": {
+                            "@type": "AggregateOffer",
+                            "lowPrice": 419,
+                            "highPrice": 419,
+                            "priceCurrency": "PEN",
+                            "offers": [
+                                {
+                                    "@type": "Offer",
+                                    "price": 419,
+                                    "priceCurrency": "PEN",
+                                    "availability": "http://schema.org/InStock",
+                                    "sku": "39259985",
+                                    "itemCondition": "http://schema.org/NewCondition",
+                                    "priceValidUntil": "2026-09-30T22:10:21Z",
+                                    "seller": {
+                                        "@type": "Organization",
+                                        "name": "wongfood"
+                                    }
+                                }
+                            ],
+                            "offerCount": 1
+                        }
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 37,
+                    "item": {
+                        "@context": "https://schema.org/",
+                        "@type": "Product",
+                        "@id": "https://www.wong.pe/horno-microondas-oster-poggm3901m-700w-25-litros-787910-2/p",
+                        "name": "Horno Microondas Oster POGGM3901M 700W 25 Litros",
+                        "brand": {
+                            "@type": "Brand",
+                            "name": "Oster"
+                        },
+                        "image": "https://wongio.vtexassets.com/arquivos/ids/355892/Oster-Horno-Microondas-POGGM3901M-25-lt-1-141997328.jpg?v=637245848226930000",
+                        "description": "&lt;li&gt;&lt;b&gt;No aplica para retiro en tienda. Sólo delivery.&lt;/b&gt;&lt;/li&gt;&lt;li&gt;Capacidad de 25 litros&lt;/li&gt;&lt;li&gt;Potencia de salida: 700 watts&lt;/li&gt;&lt;li&gt;Puerta con botón&lt;/li&gt;&lt;li&gt;Panel digital&lt;/li&gt;&lt;li&gt;11 niveles de temperatura&lt;/li&gt;",
+                        "mpn": "787910",
+                        "sku": "39150955",
+                        "offers": {
+                            "@type": "AggregateOffer",
+                            "lowPrice": 359,
+                            "highPrice": 359,
+                            "priceCurrency": "PEN",
+                            "offers": [
+                                {
+                                    "@type": "Offer",
+                                    "price": 359,
+                                    "priceCurrency": "PEN",
+                                    "availability": "http://schema.org/InStock",
+                                    "sku": "39150955",
+                                    "itemCondition": "http://schema.org/NewCondition",
+                                    "priceValidUntil": "2025-10-01T14:00:00Z",
+                                    "seller": {
+                                        "@type": "Organization",
+                                        "name": "wongfood"
+                                    }
+                                }
+                            ],
+                            "offerCount": 1
+                        }
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 38,
+                    "item": {
+                        "@context": "https://schema.org/",
+                        "@type": "Product",
+                        "@id": "https://www.wong.pe/lavadora-automatica-induram-lri-18dgr-1035262/p",
+                        "name": "Lavadora Automática Indurama LRI-18DGR",
+                        "brand": {
+                            "@type": "Brand",
+                            "name": "Indurama"
+                        },
+                        "image": "https://wongio.vtexassets.com/arquivos/ids/759408/Lavadora-Autom-tica-Indurama-LRI-18DGR-1-351694817.jpg?v=638780890502900000",
+                        "description": "&lt;li&gt;Tecnología antienredo &lt;/li&gt;&lt;li&gt;Eficiencia energética A&lt;/li&gt;&lt;li&gt;8 programas de lavado&lt;/li&gt;",
+                        "mpn": "1035262",
+                        "sku": "39314286",
+                        "offers": {
+                            "@type": "AggregateOffer",
+                            "lowPrice": 999,
+                            "highPrice": 999,
+                            "priceCurrency": "PEN",
+                            "offers": [
+                                {
+                                    "@type": "Offer",
+                                    "price": 999,
+                                    "priceCurrency": "PEN",
+                                    "availability": "http://schema.org/InStock",
+                                    "sku": "39314286",
+                                    "itemCondition": "http://schema.org/NewCondition",
+                                    "priceValidUntil": "2025-10-01T14:00:00Z",
+                                    "seller": {
+                                        "@type": "Organization",
+                                        "name": "wongfood"
+                                    }
+                                }
+                            ],
+                            "offerCount": 1
+                        }
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 39,
+                    "item": {
+                        "@context": "https://schema.org/",
+                        "@type": "Product",
+                        "@id": "https://www.wong.pe/licuadora-xtreme-mix-con-blend-n-go-blstxpg-bgw-oster/p",
+                        "name": "Licuadora Xtreme Mix con Blend-N-Go BLSTXPG-BGW Oster",
+                        "brand": {
+                            "@type": "Brand",
+                            "name": "Oster"
+                        },
+                        "image": "https://wongio.vtexassets.com/arquivos/ids/759211/Licuadora-Oster-Xtreme-Mix-1-351694846.jpg?v=638779270035130000",
+                        "description": "&lt;li&gt;Velocidad Max Crush, poder extremo para pulverizar&lt;/li&gt;&lt;li&gt;Tecnología de motor reversible&lt;/li&gt;&lt;li&gt;Potente motor de 1500 watts de potencia pico&lt;/li&gt;",
+                        "mpn": "1038245",
+                        "sku": "39314346",
+                        "offers": {
+                            "@type": "AggregateOffer",
+                            "lowPrice": 909,
+                            "highPrice": 909,
+                            "priceCurrency": "PEN",
+                            "offers": [
+                                {
+                                    "@type": "Offer",
+                                    "price": 909,
+                                    "priceCurrency": "PEN",
+                                    "availability": "http://schema.org/InStock",
+                                    "sku": "39314346",
+                                    "itemCondition": "http://schema.org/NewCondition",
+                                    "priceValidUntil": "2026-09-30T22:10:42Z",
+                                    "seller": {
+                                        "@type": "Organization",
+                                        "name": "wongfood"
+                                    }
+                                }
+                            ],
+                            "offerCount": 1
+                        }
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 40,
+                    "item": {
+                        "@context": "https://schema.org/",
+                        "@type": "Product",
+                        "@id": "https://www.wong.pe/refrigeradora-indurama-ri-359i-no-frost-2-puertas-1024440/p",
+                        "name": "Refrigeradora Indurama Ri-359I No Frost 2 Puertas",
+                        "brand": {
+                            "@type": "Brand",
+                            "name": "Indurama"
+                        },
+                        "image": "https://wongio.vtexassets.com/arquivos/ids/727304/Refrigeradora-Indurama-Ri-359I-No-Frost-2-Puertas-1-351683362.jpg?v=638633145696970000",
+                        "description": "&lt;li&gt;&lt;b&gt;No aplica para retiro en tienda. Sólo delivery.&lt;/b&gt;&lt;/li&gt;&lt;li&gt;Cantidad de Puertas: 2&lt;/li&gt;&lt;li&gt;No Frost&lt;/li&gt;&lt;li&gt;Estilo de Motor: Compresor Inverter&lt;/li&gt;&lt;/li&gt;Capacidad: 203&lt;/li&gt;",
+                        "mpn": "1024440",
+                        "sku": "39300986",
+                        "offers": {
+                            "@type": "AggregateOffer",
+                            "lowPrice": 899,
+                            "highPrice": 899,
+                            "priceCurrency": "PEN",
+                            "offers": [
+                                {
+                                    "@type": "Offer",
+                                    "price": 899,
+                                    "priceCurrency": "PEN",
+                                    "availability": "http://schema.org/InStock",
+                                    "sku": "39300986",
+                                    "itemCondition": "http://schema.org/NewCondition",
+                                    "priceValidUntil": "2025-10-01T14:00:00Z",
+                                    "seller": {
+                                        "@type": "Organization",
+                                        "name": "wongfood"
+                                    }
+                                }
+                            ],
+                            "offerCount": 1
+                        }
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 41,
+                    "item": {
+                        "@context": "https://schema.org/",
+                        "@type": "Product",
+                        "@id": "https://www.wong.pe/licuadora-acero-imaco-450w-bls503-986690-2/p",
+                        "name": "Licuadora Acero Imaco 450w BLS503",
+                        "brand": {
+                            "@type": "Brand",
+                            "name": "Imaco"
+                        },
+                        "image": "https://wongio.vtexassets.com/arquivos/ids/620642/LICUADORA-ACERO-500W-IMACO-BLS503-1-351645002.jpg?v=638134634555070000",
+                        "description": "&lt;li&gt;&lt;b&gt;No aplica para retiro en tienda. Sólo delivery.&lt;/b&gt;&lt;/li&gt;&lt;li&gt;Cuchilla de 6 aspas de acero inox&lt;/li&gt;&lt;li&gt;2 velocidades mas pulsador&lt;/li&gt;&lt;li&gt;Motor de 450w&lt;/li&gt;",
+                        "mpn": "986690",
+                        "sku": "39264463",
+                        "offers": {
+                            "@type": "AggregateOffer",
+                            "lowPrice": 89.9,
+                            "highPrice": 89.9,
+                            "priceCurrency": "PEN",
+                            "offers": [
+                                {
+                                    "@type": "Offer",
+                                    "price": 89.9,
+                                    "priceCurrency": "PEN",
+                                    "availability": "http://schema.org/InStock",
+                                    "sku": "39264463",
+                                    "itemCondition": "http://schema.org/NewCondition",
+                                    "priceValidUntil": "2026-09-30T22:10:41Z",
+                                    "seller": {
+                                        "@type": "Organization",
+                                        "name": "wongfood"
+                                    }
+                                }
+                            ],
+                            "offerCount": 1
+                        }
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 42,
+                    "item": {
+                        "@context": "https://schema.org/",
+                        "@type": "Product",
+                        "@id": "https://www.wong.pe/horno-microondas-lg-ms2032gas-20l-easyclean-negro-1001463/p",
+                        "name": "Horno Microondas LG MS2032GAS 20L EasyClean Negro",
+                        "brand": {
+                            "@type": "Brand",
+                            "name": "LG"
+                        },
+                        "image": "https://wongio.vtexassets.com/arquivos/ids/673803/Horno-Microondas-LG-20-Litros-MS2032GAS-1-351661731.jpg?v=638351376568500000",
+                        "description": "&lt;li&gt;&lt;b&gt;No aplica para retiro en tienda. Sólo delivery.&lt;/b&gt;&lt;/li&gt;&lt;li&gt;EasyClean&lt;/li&gt;&lt;li&gt;Nivel de Potencia&lt;/li&gt;&lt;li&gt;Descongelado Automático&lt;/li&gt;",
+                        "mpn": "1001463",
+                        "sku": "39275043",
+                        "offers": {
+                            "@type": "AggregateOffer",
+                            "lowPrice": 339,
+                            "highPrice": 339,
+                            "priceCurrency": "PEN",
+                            "offers": [
+                                {
+                                    "@type": "Offer",
+                                    "price": 339,
+                                    "priceCurrency": "PEN",
+                                    "availability": "http://schema.org/InStock",
+                                    "sku": "39275043",
+                                    "itemCondition": "http://schema.org/NewCondition",
+                                    "priceValidUntil": "2026-09-30T22:10:41Z",
+                                    "seller": {
+                                        "@type": "Organization",
+                                        "name": "wongfood"
+                                    }
+                                }
+                            ],
+                            "offerCount": 1
+                        }
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 43,
+                    "item": {
+                        "@context": "https://schema.org/",
+                        "@type": "Product",
+                        "@id": "https://www.wong.pe/cocina-de-pie-indurama-fontana-spazio20-4-quemadores-890837-2/p",
+                        "name": "Cocina de Pie Indurama Fontana Spazio20 4 Quemadores",
+                        "brand": {
+                            "@type": "Brand",
+                            "name": "Indurama"
+                        },
+                        "image": "https://wongio.vtexassets.com/arquivos/ids/391746/Indurama-Cocina-de-Pie-Fontana-Spazio-3-20-4-Quemadores-1-168531118.jpg?v=637401300268470000",
+                        "description": "&lt;li&gt;&lt;b&gt;No aplica para retiro en tienda. Sólo delivery.&lt;/b&gt;&lt;/li&gt;&lt;li&gt;Número de quemadores: 4&lt;/li&gt;&lt;li&gt;Tipo de cocina: Gas&lt;/li&gt;&lt;li&gt;Capacidad del horno: 55 litros&lt;/li&gt;",
+                        "mpn": "890837",
+                        "sku": "39156324",
+                        "offers": {
+                            "@type": "AggregateOffer",
+                            "lowPrice": 599,
+                            "highPrice": 599,
+                            "priceCurrency": "PEN",
+                            "offers": [
+                                {
+                                    "@type": "Offer",
+                                    "price": 599,
+                                    "priceCurrency": "PEN",
+                                    "availability": "http://schema.org/InStock",
+                                    "sku": "39156324",
+                                    "itemCondition": "http://schema.org/NewCondition",
+                                    "priceValidUntil": "2026-09-30T22:05:24Z",
+                                    "seller": {
+                                        "@type": "Organization",
+                                        "name": "wongfood"
+                                    }
+                                }
+                            ],
+                            "offerCount": 1
+                        }
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 44,
+                    "item": {
+                        "@context": "https://schema.org/",
+                        "@type": "Product",
+                        "@id": "https://www.wong.pe/horno-microondas-oster-pogme2701-20-litros/p",
+                        "name": "Horno Microondas Oster POGME2701 20 Litros",
+                        "brand": {
+                            "@type": "Brand",
+                            "name": "Oster"
+                        },
+                        "image": "https://wongio.vtexassets.com/arquivos/ids/537525/Horno-Microondas-20L-Oster-POGME2701-1-299483645.jpg?v=637853823885300000",
+                        "description": "&lt;li&gt;&lt;b&gt;No aplica para retiro en tienda. Sólo delivery.&lt;/b&gt;&lt;/li&gt;&lt;li&gt;Potencia: 700W&lt;/li&gt;&lt;li&gt;Capacidad: 20 litros&lt;/li&gt;&lt;li&gt;Estructura de metal&lt;/li&gt;&lt;li&gt;Panel digital&lt;/li&gt;&lt;li&gt;Medidas (Alt x Anch x Prof): 25.9 x 34.5 x 44 cm&lt;/li&gt;",
+                        "mpn": "960253",
+                        "sku": "39205063",
+                        "offers": {
+                            "@type": "AggregateOffer",
+                            "lowPrice": 269,
+                            "highPrice": 269,
+                            "priceCurrency": "PEN",
+                            "offers": [
+                                {
+                                    "@type": "Offer",
+                                    "price": 269,
+                                    "priceCurrency": "PEN",
+                                    "availability": "http://schema.org/InStock",
+                                    "sku": "39205063",
+                                    "itemCondition": "http://schema.org/NewCondition",
+                                    "priceValidUntil": "2025-10-01T14:00:00Z",
+                                    "seller": {
+                                        "@type": "Organization",
+                                        "name": "wongfood"
+                                    }
+                                }
+                            ],
+                            "offerCount": 1
+                        }
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 45,
+                    "item": {
+                        "@context": "https://schema.org/",
+                        "@type": "Product",
+                        "@id": "https://www.wong.pe/hervidor-electrico-azul-1-7-l-bvstkt4177v-azul-oster/p",
+                        "name": "Hervidor eléctrico azul 1.7 L BVSTKT4177V Azul Oster",
+                        "brand": {
+                            "@type": "Brand",
+                            "name": "Oster"
+                        },
+                        "image": "https://wongio.vtexassets.com/arquivos/ids/529302/Hervidor-Oster-1-7-L-litros-Azul-Pl-stico-1-275390618.jpg?v=637825721165430000",
+                        "description": "&lt;li&gt;&lt;b&gt;No aplica para retiro en tienda. Sólo delivery.&lt;/b&gt;&lt;/li&gt;&lt;li&gt;Hervidor con diseño moderno y elegante&lt;/li&gt;&lt;li&gt;Hervidor Oster 1.7 L-litros Azul Plástico&lt;/li&gt;&lt;li&gt;Capacidad: 1.7 litros&lt;/li&gt;&lt;li&gt;Material: Plástico resistente&lt;/li&gt;&lt;li&gt;Apagado automático&lt;/li&gt;&lt;li&gt;Base con guarda cable&lt;/li&gt;",
+                        "mpn": "957869",
+                        "sku": "39202661",
+                        "offers": {
+                            "@type": "AggregateOffer",
+                            "lowPrice": 69.9,
+                            "highPrice": 69.9,
+                            "priceCurrency": "PEN",
+                            "offers": [
+                                {
+                                    "@type": "Offer",
+                                    "price": 69.9,
+                                    "priceCurrency": "PEN",
+                                    "availability": "http://schema.org/InStock",
+                                    "sku": "39202661",
+                                    "itemCondition": "http://schema.org/NewCondition",
+                                    "priceValidUntil": "2026-09-30T22:04:57Z",
+                                    "seller": {
+                                        "@type": "Organization",
+                                        "name": "wongfood"
+                                    }
+                                }
+                            ],
+                            "offerCount": 1
+                        }
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 46,
+                    "item": {
+                        "@context": "https://schema.org/",
+                        "@type": "Product",
+                        "@id": "https://www.wong.pe/sandwichera-panini-thomas-th-975-2/p",
+                        "name": "Sandwichera Panini Thomas TH-975",
+                        "brand": {
+                            "@type": "Brand",
+                            "name": "Thomas"
+                        },
+                        "image": "https://wongio.vtexassets.com/arquivos/ids/605061/Sandwichera-Panini-Thomas-TH-975-1-245122180.jpg?v=638068090732830000",
+                        "description": "&lt;li&gt;&lt;b&gt;No aplica para retiro en tienda. Sólo delivery.&lt;/b&gt;&lt;/li&gt;&lt;li&gt;Potencia: 1500w&lt;/li&gt;&lt;li&gt;Cuenta con un sistema de flotación para regulación de altura&lt;/li&gt;&lt;li&gt; Healthy grill, recipiente de residuos facilita deshacerse de los excesos de grasa&lt;/li&gt;&lt;li&gt; Luz indicadora de encendido y listo&lt;/li&gt;&lt;li&gt;Medida (Alt x Anch x Prof): 31 x 14.5 x 36.3 cm&lt;/li&gt;",
+                        "mpn": "949151",
+                        "sku": "39186135",
+                        "offers": {
+                            "@type": "AggregateOffer",
+                            "lowPrice": 129,
+                            "highPrice": 129,
+                            "priceCurrency": "PEN",
+                            "offers": [
+                                {
+                                    "@type": "Offer",
+                                    "price": 129,
+                                    "priceCurrency": "PEN",
+                                    "availability": "http://schema.org/InStock",
+                                    "sku": "39186135",
+                                    "itemCondition": "http://schema.org/NewCondition",
+                                    "priceValidUntil": "2026-09-30T22:11:54Z",
+                                    "seller": {
+                                        "@type": "Organization",
+                                        "name": "wongfood"
+                                    }
+                                }
+                            ],
+                            "offerCount": 1
+                        }
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 47,
+                    "item": {
+                        "@context": "https://schema.org/",
+                        "@type": "Product",
+                        "@id": "https://www.wong.pe/licuadora-personal-thomas-th-300pb-1007887-2/p",
+                        "name": "Licuadora Personal Thomas Th-300Pb",
+                        "brand": {
+                            "@type": "Brand",
+                            "name": "Thomas"
+                        },
+                        "image": "https://wongio.vtexassets.com/arquivos/ids/684725/Licuadora-Personal-Thomas-Th-300Pb-1-351665672.jpg?v=638400730131200000",
+                        "description": "&lt;li&gt;&lt;b&gt;No aplica para retiro en tienda. Sólo delivery.&lt;/b&gt;&lt;/li&gt;&lt;li&gt;Leche de coco&lt;/li&gt;&lt;li&gt;Vainilla&lt;/li&gt;&lt;li&gt;Relajante&lt;/li&gt;",
+                        "mpn": "1007887",
+                        "sku": "39278342",
+                        "offers": {
+                            "@type": "AggregateOffer",
+                            "lowPrice": 139,
+                            "highPrice": 139,
+                            "priceCurrency": "PEN",
+                            "offers": [
+                                {
+                                    "@type": "Offer",
+                                    "price": 139,
+                                    "priceCurrency": "PEN",
+                                    "availability": "http://schema.org/InStock",
+                                    "sku": "39278342",
+                                    "itemCondition": "http://schema.org/NewCondition",
+                                    "priceValidUntil": "2026-09-30T22:12:38Z",
+                                    "seller": {
+                                        "@type": "Organization",
+                                        "name": "wongfood"
+                                    }
+                                }
+                            ],
+                            "offerCount": 1
+                        }
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 48,
+                    "item": {
+                        "@context": "https://schema.org/",
+                        "@type": "Product",
+                        "@id": "https://www.wong.pe/refrigeradora-top-freezer-lg-gt33wpp-334l-door-cooling-plateada-990986-2/p",
+                        "name": "Refrigeradora Top Freezer LG GT33WPP 334L Door Cooling Plateada",
+                        "brand": {
+                            "@type": "Brand",
+                            "name": "LG"
+                        },
+                        "image": "https://wongio.vtexassets.com/arquivos/ids/732165/Refrigeradora-Top-Freezer-LG-GT33WPP-334L-Door-Cooling-Plateada-1-351649256.jpg?v=638653776994600000",
+                        "description": "&lt;li&gt;&lt;b&gt;No aplica para retiro en tienda. Sólo delivery.&lt;/b&gt;&lt;/li&gt;&lt;li&gt;Compresor Smart Inverter&lt;/li&gt;&lt;li&gt;Múltiples salidas de aire&lt;/li&gt;&lt;li&gt;Doorcooling+&lt;/li&gt;",
+                        "mpn": "990986",
+                        "sku": "39266777",
+                        "offers": {
+                            "@type": "AggregateOffer",
+                            "lowPrice": 1799,
+                            "highPrice": 1799,
+                            "priceCurrency": "PEN",
+                            "offers": [
+                                {
+                                    "@type": "Offer",
+                                    "price": 1799,
+                                    "priceCurrency": "PEN",
+                                    "availability": "http://schema.org/InStock",
+                                    "sku": "39266777",
+                                    "itemCondition": "http://schema.org/NewCondition",
+                                    "priceValidUntil": "2026-09-30T22:10:20Z",
+                                    "seller": {
+                                        "@type": "Organization",
+                                        "name": "wongfood"
+                                    }
+                                }
+                            ],
+                            "offerCount": 1
+                        }
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 49,
+                    "item": {
+                        "@context": "https://schema.org/",
+                        "@type": "Product",
+                        "@id": "https://www.wong.pe/lavadora-carga-superior-lg-wt17bv6t-17-kg-ai-dd-negro-1016817/p",
+                        "name": "Lavadora Carga Superior LG WT17BV6T 17 Kg AI DD Negro",
+                        "brand": {
+                            "@type": "Brand",
+                            "name": "LG"
+                        },
+                        "image": "https://wongio.vtexassets.com/arquivos/ids/712211/Lavadora-LG-WT17BV6T-AI-DD-Negro-1-351675824.jpg?v=638542641719630000",
+                        "description": "&lt;li&gt;&lt;b&gt;No aplica para retiro en tienda. Sólo delivery.&lt;/b&gt;&lt;/li&gt;&lt;li&gt;AI DD Inteligencia Artificial&lt;/li&gt;&lt;li&gt;6 Motion DD&lt;/li&gt;&lt;li&gt;Scent&lt;/li&gt;",
+                        "mpn": "1016817",
+                        "sku": "39288410",
+                        "offers": {
+                            "@type": "AggregateOffer",
+                            "lowPrice": 1699,
+                            "highPrice": 1699,
+                            "priceCurrency": "PEN",
+                            "offers": [
+                                {
+                                    "@type": "Offer",
+                                    "price": 1699,
+                                    "priceCurrency": "PEN",
+                                    "availability": "http://schema.org/InStock",
+                                    "sku": "39288410",
+                                    "itemCondition": "http://schema.org/NewCondition",
+                                    "priceValidUntil": "2026-09-30T22:10:20Z",
+                                    "seller": {
+                                        "@type": "Organization",
+                                        "name": "wongfood"
+                                    }
+                                }
+                            ],
+                            "offerCount": 1
+                        }
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 50,
+                    "item": {
+                        "@context": "https://schema.org/",
+                        "@type": "Product",
+                        "@id": "https://www.wong.pe/thomas-tostador-th-120-2-rebanadas-466939/p",
+                        "name": "Thomas Tostador TH-120",
+                        "brand": {
+                            "@type": "Brand",
+                            "name": "Thomas"
+                        },
+                        "image": "https://wongio.vtexassets.com/arquivos/ids/605042/Thomas-Tostador-TH-120-2-Rebanadas-1-87839.jpg?v=638068090667700000",
+                        "description": "&lt;li&gt;&lt;b&gt;No aplica para retiro en tienda. Sólo delivery.&lt;/b&gt;&lt;/li&gt;&lt;li&gt;Capacidad de 2 rebanadas&lt;/li&gt;&lt;li&gt;Potencia de salida de 800 watts&lt;/li&gt;&lt;li&gt;Niveles de tostado: 6&lt;/li&gt;",
+                        "mpn": "466939",
+                        "sku": "17851",
+                        "offers": {
+                            "@type": "AggregateOffer",
+                            "lowPrice": 99,
+                            "highPrice": 99,
+                            "priceCurrency": "PEN",
+                            "offers": [
+                                {
+                                    "@type": "Offer",
+                                    "price": 99,
+                                    "priceCurrency": "PEN",
+                                    "availability": "http://schema.org/InStock",
+                                    "sku": "17851",
+                                    "itemCondition": "http://schema.org/NewCondition",
+                                    "priceValidUntil": "2026-09-30T22:09:49Z",
+                                    "seller": {
+                                        "@type": "Organization",
+                                        "name": "wongfood"
+                                    }
+                                }
+                            ],
+                            "offerCount": 1
+                        }
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 51,
+                    "item": {
+                        "@context": "https://schema.org/",
+                        "@type": "Product",
+                        "@id": "https://www.wong.pe/refrigerador-indurama-177l-ri-289d-autofrost-croma-984127/p",
+                        "name": "Refrigerador Indurama 177L RI-289D Autofrost Croma",
+                        "brand": {
+                            "@type": "Brand",
+                            "name": "Indurama"
+                        },
+                        "image": "https://wongio.vtexassets.com/arquivos/ids/628222/Refrigeradora-Indurama-Ri-289D-1-351642491.jpg?v=638173716727730000",
+                        "description": "&lt;li&gt;&lt;b&gt;No aplica para retiro en tienda. Sólo delivery.&lt;/b&gt;&lt;/li&gt;&lt;li&gt;Capacidad: 177 litros&lt;/li&gt;&lt;li&gt;Tipo: Top Freezer&lt;/li&gt;&lt;li&gt;Sistema de Frío: Autofrost&lt;/li&gt;&lt;li&gt;Con dispensador de agua&lt;/li&gt;",
+                        "mpn": "984127",
+                        "sku": "39258374",
+                        "offers": {
+                            "@type": "AggregateOffer",
+                            "lowPrice": 699,
+                            "highPrice": 699,
+                            "priceCurrency": "PEN",
+                            "offers": [
+                                {
+                                    "@type": "Offer",
+                                    "price": 699,
+                                    "priceCurrency": "PEN",
+                                    "availability": "http://schema.org/InStock",
+                                    "sku": "39258374",
+                                    "itemCondition": "http://schema.org/NewCondition",
+                                    "priceValidUntil": "2025-10-01T14:00:00Z",
+                                    "seller": {
+                                        "@type": "Organization",
+                                        "name": "wongfood"
+                                    }
+                                }
+                            ],
+                            "offerCount": 1
+                        }
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 52,
+                    "item": {
+                        "@context": "https://schema.org/",
+                        "@type": "Product",
+                        "@id": "https://www.wong.pe/oster-hervidor-electrico-1-7-lt-bvstkt4177w-2/p",
+                        "name": "Oster Hervidor Eléctrico 1.7 Lt BVSTKT4177W",
+                        "brand": {
+                            "@type": "Brand",
+                            "name": "Oster"
+                        },
+                        "image": "https://wongio.vtexassets.com/arquivos/ids/429467/Oster-Hervidor-El-ctrico-1-7-Lt-BVSTKT4177W-1-195266672.jpg?v=637540474166700000",
+                        "description": "&lt;li&gt;&lt;b&gt;No aplica para retiro en tienda. Sólo delivery.&lt;/b&gt;&lt;/li&gt;&lt;p&gt;- Potencia de 1850 watts&lt;/p&gt;&lt;p&gt;- Capacidad de 1.7 litros&lt;/p&gt;&lt;p&gt;- Apagado automático&lt;/p&gt;&lt;p&gt;- Filtro de agua en malla fina removible&lt;/p&gt;&lt;p&gt;- Elimina los excesos de partículas&lt;/p&gt;&lt;p&gt;- Base desmontable con giro de 360º&lt;/p&gt;&lt;p&gt;- Indicador de agua visible&lt;/p&gt;&lt;p&gt;- Base antideslizante&lt;/p&gt;&lt;p&gt;- Protección que impide que hierva el agua hasta secarse&lt;/p&gt;",
+                        "mpn": "914719",
+                        "sku": "39169105",
+                        "offers": {
+                            "@type": "AggregateOffer",
+                            "lowPrice": 89.9,
+                            "highPrice": 89.9,
+                            "priceCurrency": "PEN",
+                            "offers": [
+                                {
+                                    "@type": "Offer",
+                                    "price": 89.9,
+                                    "priceCurrency": "PEN",
+                                    "availability": "http://schema.org/InStock",
+                                    "sku": "39169105",
+                                    "itemCondition": "http://schema.org/NewCondition",
+                                    "priceValidUntil": "2026-09-30T22:12:40Z",
+                                    "seller": {
+                                        "@type": "Organization",
+                                        "name": "wongfood"
+                                    }
+                                }
+                            ],
+                            "offerCount": 1
+                        }
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 53,
+                    "item": {
+                        "@context": "https://schema.org/",
+                        "@type": "Product",
+                        "@id": "https://www.wong.pe/nex-freezer-horizontal-100l-chf1100-701595/p",
+                        "name": "Nex Freezer Horizontal 100L CHF1100",
+                        "brand": {
+                            "@type": "Brand",
+                            "name": "NEX"
+                        },
+                        "image": "https://wongio.vtexassets.com/arquivos/ids/370056/Nex-Congeladora-Vertical-CHF1100-100-lt-1-34453655.jpg?v=637307460069070000",
+                        "description": "&lt;li&gt;Capacidad: 100 litros&lt;/li&gt;&lt;li&gt;Tecnología: Direct Cooling&lt;/li&gt;&lt;li&gt;Botón para descongelamiento manual&lt;/li&gt;&lt;li&gt;Regulador de temperatura&lt;/li&gt;&lt;li&gt;Cerradura con llave&lt;/li&gt;&lt;li&gt;Rack interior metálico&lt;/li&gt;&lt;li&gt;Medidas (Alt x Anch x Prof): 84.5 x 54.5 x 54.5 cm&lt;/li&gt;&lt;li&gt;Eficiencia energética: A+&lt;/li&gt;",
+                        "mpn": "701595",
+                        "sku": "39154865",
+                        "offers": {
+                            "@type": "AggregateOffer",
+                            "lowPrice": 499,
+                            "highPrice": 499,
+                            "priceCurrency": "PEN",
+                            "offers": [
+                                {
+                                    "@type": "Offer",
+                                    "price": 499,
+                                    "priceCurrency": "PEN",
+                                    "availability": "http://schema.org/InStock",
+                                    "sku": "39154865",
+                                    "itemCondition": "http://schema.org/NewCondition",
+                                    "priceValidUntil": "2026-09-30T22:11:54Z",
+                                    "seller": {
+                                        "@type": "Organization",
+                                        "name": "wongfood"
+                                    }
+                                }
+                            ],
+                            "offerCount": 1
+                        }
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 54,
+                    "item": {
+                        "@context": "https://schema.org/",
+                        "@type": "Product",
+                        "@id": "https://www.wong.pe/microondas-digital-samsung-mwo-grill-23-lts-negro-1014694/p",
+                        "name": "Microondas Digital Samsung Mwo Grill 23 LTS Negro",
+                        "brand": {
+                            "@type": "Brand",
+                            "name": "Samsung"
+                        },
+                        "image": "https://wongio.vtexassets.com/arquivos/ids/712933/Microondas-Digital-Samsung-Mwo-Grill-23-LTS-Negro-1-351673002.jpg?v=638551281783600000",
+                        "description": "&lt;li&gt;&lt;b&gt;No aplica para retiro en tienda. Sólo delivery.&lt;/b&gt;&lt;/li&gt;&lt;li&gt;Botón Aderezo Peruano&lt;/li&gt;&lt;li&gt;Interior de Cerámica Enamel&lt;/li&gt;&lt;li&gt;Triple Distribución de Ondas&lt;/li&gt;",
+                        "mpn": "1014694",
+                        "sku": "39283768",
+                        "offers": {
+                            "@type": "AggregateOffer",
+                            "lowPrice": 459,
+                            "highPrice": 459,
+                            "priceCurrency": "PEN",
+                            "offers": [
+                                {
+                                    "@type": "Offer",
+                                    "price": 459,
+                                    "priceCurrency": "PEN",
+                                    "availability": "http://schema.org/InStock",
+                                    "sku": "39283768",
+                                    "itemCondition": "http://schema.org/NewCondition",
+                                    "priceValidUntil": "2100-01-01T04:59:59Z",
+                                    "seller": {
+                                        "@type": "Organization",
+                                        "name": "wongfood"
+                                    }
+                                }
+                            ],
+                            "offerCount": 1
+                        }
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 55,
+                    "item": {
+                        "@context": "https://schema.org/",
+                        "@type": "Product",
+                        "@id": "https://www.wong.pe/horno-microondas-30l-oster-poggm91101g-967945-2/p",
+                        "name": "Horno Microondas 30L Oster POGGM91101G",
+                        "brand": {
+                            "@type": "Brand",
+                            "name": "Oster"
+                        },
+                        "image": "https://wongio.vtexassets.com/arquivos/ids/545822/Horno-Microondas-Oster-Poggm-91101G-1-317510253.jpg?v=637889253678630000",
+                        "description": "&lt;li&gt;&lt;b&gt;No aplica para retiro en tienda. Sólo delivery.&lt;/b&gt;&lt;/li&gt;&lt;li&gt;Capacidad: 30 litros&lt;/li&gt;&lt;li&gt;Controles digitales con programas definidos&lt;/li&gt;&lt;li&gt;Cuenta con 10 niveles de potencia para cocción especializada&lt;/li&gt;&lt;li&gt;Material: Frente de acero inoxidable y agarradera cromada&lt;/li&gt;&lt;li&gt;Peso: 16 kg&lt;/li&gt;",
+                        "mpn": "967945",
+                        "sku": "39207067",
+                        "offers": {
+                            "@type": "AggregateOffer",
+                            "lowPrice": 619,
+                            "highPrice": 619,
+                            "priceCurrency": "PEN",
+                            "offers": [
+                                {
+                                    "@type": "Offer",
+                                    "price": 619,
+                                    "priceCurrency": "PEN",
+                                    "availability": "http://schema.org/InStock",
+                                    "sku": "39207067",
+                                    "itemCondition": "http://schema.org/NewCondition",
+                                    "priceValidUntil": "2026-09-30T22:09:20Z",
+                                    "seller": {
+                                        "@type": "Organization",
+                                        "name": "wongfood"
+                                    }
+                                }
+                            ],
+                            "offerCount": 1
+                        }
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 56,
+                    "item": {
+                        "@context": "https://schema.org/",
+                        "@type": "Product",
+                        "@id": "https://www.wong.pe/frigobar-retro-menta-90l-1042933/p",
+                        "name": "Frigobar Retro Menta 90L",
+                        "brand": {
+                            "@type": "Brand",
+                            "name": "Libero"
+                        },
+                        "image": "https://wongio.vtexassets.com/arquivos/ids/781241/Frigobar-Retro-Menta-90L-1-351699197.jpg?v=638899149664370000",
+                        "description": "&lt;li&gt;VIDRIO TEMPLADO&lt;/li&gt;&lt;li&gt;PORTA BOTELLAS&lt;/li&gt;&lt;li&gt;GRAN CAPACIDAD&lt;/li&gt;",
+                        "mpn": "1042933",
+                        "sku": "39320144",
+                        "offers": {
+                            "@type": "AggregateOffer",
+                            "lowPrice": 499,
+                            "highPrice": 499,
+                            "priceCurrency": "PEN",
+                            "offers": [
+                                {
+                                    "@type": "Offer",
+                                    "price": 499,
+                                    "priceCurrency": "PEN",
+                                    "availability": "http://schema.org/InStock",
+                                    "sku": "39320144",
+                                    "itemCondition": "http://schema.org/NewCondition",
+                                    "priceValidUntil": "2100-01-01T04:59:59Z",
+                                    "seller": {
+                                        "@type": "Organization",
+                                        "name": "wongfood"
+                                    }
+                                }
+                            ],
+                            "offerCount": 1
+                        }
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 57,
+                    "item": {
+                        "@context": "https://schema.org/",
+                        "@type": "Product",
+                        "@id": "https://www.wong.pe/cocina-de-piso-a-gas-76cm-inox-mabe-cmp7640fx0-1019107/p",
+                        "name": "Cocina de Piso a Gas 76cm Inox Mabe cmp7640Fx0",
+                        "brand": {
+                            "@type": "Brand",
+                            "name": "Mabe"
+                        },
+                        "image": "https://wongio.vtexassets.com/arquivos/ids/784611/Cocina-de-Piso-a-Gas-76cm-Inox-Mabe-cmp7640Fx0-1-351676625.jpg?v=638906458005300000",
+                        "description": "&lt;li&gt;&lt;b&gt;No aplica para retiro en tienda. Sólo delivery.&lt;/b&gt;&lt;/li&gt;&lt;li&gt;Número de quemadores: 5&lt;/li&gt;&lt;li&gt; 1 parrilla autodeslizable y  Bandeja recoge grasa&lt;/li&gt;&lt;li&gt;Grill superior a gas&lt;/li&gt;",
+                        "mpn": "1019107",
+                        "sku": "39290952",
+                        "offers": {
+                            "@type": "AggregateOffer",
+                            "lowPrice": 1499,
+                            "highPrice": 1499,
+                            "priceCurrency": "PEN",
+                            "offers": [
+                                {
+                                    "@type": "Offer",
+                                    "price": 1499,
+                                    "priceCurrency": "PEN",
+                                    "availability": "http://schema.org/InStock",
+                                    "sku": "39290952",
+                                    "itemCondition": "http://schema.org/NewCondition",
+                                    "priceValidUntil": "2025-10-01T14:00:00Z",
+                                    "seller": {
+                                        "@type": "Organization",
+                                        "name": "wongfood"
+                                    }
+                                }
+                            ],
+                            "offerCount": 1
+                        }
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 58,
+                    "item": {
+                        "@context": "https://schema.org/",
+                        "@type": "Product",
+                        "@id": "https://www.wong.pe/freidora-de-aire-imaco-manual-af6015m-6l-993947-2/p",
+                        "name": "Freidora de Aire Imaco Manual Af6015M 6L",
+                        "brand": {
+                            "@type": "Brand",
+                            "name": "Imaco"
+                        },
+                        "image": "https://wongio.vtexassets.com/arquivos/ids/668082/Freidora-de-Aire-Imaco-Manual-Af6015M-6L-1-351652704.jpg?v=638331869921630000",
+                        "description": "&lt;li&gt;&lt;b&gt;No aplica para retiro en tienda. Sólo delivery.&lt;/b&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt;No aplica para retiro en tienda. Sólo delivery.&lt;/b&gt;&lt;/li&gt;&lt;li&gt;6 litros de capacidad&lt;/li&gt;&lt;li&gt;Temporizador de 60 minutos&lt;/li&gt;&lt;li&gt;99 porciento menos de aceite que las freidoras tradicionales&lt;/li&gt;",
+                        "mpn": "993947",
+                        "sku": "39268319",
+                        "offers": {
+                            "@type": "AggregateOffer",
+                            "lowPrice": 249.9,
+                            "highPrice": 249.9,
+                            "priceCurrency": "PEN",
+                            "offers": [
+                                {
+                                    "@type": "Offer",
+                                    "price": 249.9,
+                                    "priceCurrency": "PEN",
+                                    "availability": "http://schema.org/InStock",
+                                    "sku": "39268319",
+                                    "itemCondition": "http://schema.org/NewCondition",
+                                    "priceValidUntil": "2026-09-30T22:13:39Z",
+                                    "seller": {
+                                        "@type": "Organization",
+                                        "name": "wongfood"
+                                    }
+                                }
+                            ],
+                            "offerCount": 1
+                        }
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 59,
+                    "item": {
+                        "@context": "https://schema.org/",
+                        "@type": "Product",
+                        "@id": "https://www.wong.pe/aspiradora-thomas-inalambrica-th-1025-1018859/p",
+                        "name": "Aspiradora Thomas Inalámbrica Th-1025",
+                        "brand": {
+                            "@type": "Brand",
+                            "name": "Siegen"
+                        },
+                        "image": "https://wongio.vtexassets.com/arquivos/ids/718867/Aspiradora-Thomas-Inal-mbrica-Th-1025-1-351676250.jpg?v=638586489711570000",
+                        "description": "&lt;li&gt;&lt;b&gt;No aplica para retiro en tienda. Sólo delivery.&lt;/b&gt;&lt;/li&gt;&lt;li&gt;Aspiradora portátil desmontable para una mayor versatilidad &lt;/li&gt;&lt;li&gt;2 niveles de velocidad | Bi-voltaje&lt;/li&gt;&lt;li&gt;Base de carga Stand&amp;Go &lt;/li&gt;",
+                        "mpn": "1018859",
+                        "sku": "39290502",
+                        "offers": {
+                            "@type": "AggregateOffer",
+                            "lowPrice": 449,
+                            "highPrice": 449,
+                            "priceCurrency": "PEN",
+                            "offers": [
+                                {
+                                    "@type": "Offer",
+                                    "price": 449,
+                                    "priceCurrency": "PEN",
+                                    "availability": "http://schema.org/InStock",
+                                    "sku": "39290502",
+                                    "itemCondition": "http://schema.org/NewCondition",
+                                    "priceValidUntil": "2026-09-30T22:12:39Z",
+                                    "seller": {
+                                        "@type": "Organization",
+                                        "name": "wongfood"
+                                    }
+                                }
+                            ],
+                            "offerCount": 1
+                        }
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 60,
+                    "item": {
+                        "@context": "https://schema.org/",
+                        "@type": "Product",
+                        "@id": "https://www.wong.pe/imaco-hervidor-electrico-ke1801-1-8-lt-2/p",
+                        "name": "Imaco Hervidor Eléctrico KE1801 1.8 Lt",
+                        "brand": {
+                            "@type": "Brand",
+                            "name": "Imaco"
+                        },
+                        "image": "https://wongio.vtexassets.com/arquivos/ids/656646/Imaco-Hervidor-El-ctrico-KE1801-1-8-Lt-1-238667.jpg?v=638300722716570000",
+                        "description": "&lt;li&gt;&lt;b&gt;No aplica para retiro en tienda. Sólo delivery.&lt;/b&gt;&lt;/li&gt;&lt;p&gt;- Potencia de salida de 1500 watts&lt;/p&gt;&lt;p&gt;- Capacidad de 1.8 litros&lt;/p&gt;&lt;p&gt;- Apagado automático&lt;/p&gt;&lt;p&gt;- Hervor en 5 minutos&lt;/p&gt;&lt;p&gt;- Tapa de seguridad&lt;/p&gt;&lt;p&gt;- Base desmontable con giro de 360º&lt;/p&gt;&lt;p&gt;- Material de la estructura en acero&lt;/p&gt;&lt;a href=&quot;#wong_ver_mas&quot;&gt;- ver más&lt;/a&gt;",
+                        "mpn": "717981",
+                        "sku": "39147940",
+                        "offers": {
+                            "@type": "AggregateOffer",
+                            "lowPrice": 59.9,
+                            "highPrice": 59.9,
+                            "priceCurrency": "PEN",
+                            "offers": [
+                                {
+                                    "@type": "Offer",
+                                    "price": 59.9,
+                                    "priceCurrency": "PEN",
+                                    "availability": "http://schema.org/InStock",
+                                    "sku": "39147940",
+                                    "itemCondition": "http://schema.org/NewCondition",
+                                    "priceValidUntil": "2026-09-30T22:13:39Z",
+                                    "seller": {
+                                        "@type": "Organization",
+                                        "name": "wongfood"
+                                    }
+                                }
+                            ],
+                            "offerCount": 1
+                        }
+                    }
+                }
+            ]
+        }
+    }
+]
