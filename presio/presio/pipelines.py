@@ -7,6 +7,7 @@
 # useful for handling different item types with a single interface
 import mysql.connector
 from itemadapter import ItemAdapter
+from datetime import datetime
 
 
 class PresioPipeline:
@@ -32,29 +33,53 @@ class SaveProductPipeline:
         self.cur = self.conn.cursor()
         # self.cur.execute(""" """)
 
-    def process_item(self, item, spider):
+    from datetime import datetime
 
-        self.cur.execute(""" insert into product (
-            id, 
-            name, 
-            categoryid,
-            price
-        ) values (
-            %s, 
-            %s, 
-            %s,
-            %s
-        )""", (
+    def process_item(self, item, spider):
+        current_date = datetime.now()  # Get the current date/time
+
+        self.cur.execute("""
+            INSERT INTO product (
+                id, 
+                name, 
+                categoryid,
+                price,
+                priceonline,
+                pricecurrency,
+                discount,
+                updatedate
+            ) VALUES (
+                %s, 
+                %s, 
+                %s,
+                %s,
+                %s,
+                %s,
+                %s,
+                %s
+            )
+            ON DUPLICATE KEY UPDATE
+                name = VALUES(name),
+                categoryid = VALUES(categoryid),
+                price = VALUES(price),
+                priceonline = VALUES(priceonline),
+                pricecurrency = VALUES(pricecurrency),
+                discount = VALUES(discount),
+                updatedate = NOW()
+            """, (
             item['id'],
             item['name'],
             1,
-            item['price']
+            item['price'],
+            item.get('priceonline', None),
+            item.get('pricecurrency', None),
+            item.get('discount', None),
+            current_date
         ))
 
         self.conn.commit()
-
         return item
-    
+
     def close_spider(self, spider):
         self.cur.close()
         self.conn.close()

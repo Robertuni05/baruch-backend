@@ -67,8 +67,8 @@ PLAYWRIGHT_BROWSER_TYPE = "chromium"
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-    "presio.pipelines.PresioPipeline": 300,
-    "presio.pipelines.SaveProductPipeline": 400,
+    # "presio.pipelines.PresioPipeline": 300,
+    # "presio.pipelines.SaveProductPipeline": 400,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)

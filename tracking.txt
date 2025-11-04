@@ -8,3 +8,8 @@ db mysql
 
 11.10.2105
 >guardar en bd los productos
+
+28.10.2025
+>BUG_01 a veces al ejecutar el scrapy en primera, pareciera 
+que el middleware no logra traer el json de productos.
+
