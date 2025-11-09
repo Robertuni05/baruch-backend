@@ -19,6 +19,7 @@ conda install pip
 ```bash
 conda install Scrapy
 pip install scrapy-playwright
+pip install mysql-connector-python
 ```
 
 ### 3. Start Scrapy Project
