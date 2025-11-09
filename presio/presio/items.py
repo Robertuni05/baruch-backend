@@ -1,15 +1,14 @@
 # Define here the models for your scraped items
-#
-# See documentation in:
-# https://docs.scrapy.org/en/latest/topics/items.html
 import scrapy
 
 
 class ProductItem(scrapy.Item):
-    id = scrapy.Field()
-    name = scrapy.Field()
-    price = scrapy.Field()
-    discount = scrapy.Field()
+    product_id = scrapy.Field()
+    product_name = scrapy.Field()
+    regular_price = scrapy.Field()
+    online_price = scrapy.Field()
+    discount_percentage = scrapy.Field()
+    product_url = scrapy.Field()
 
 
 class TestItem(scrapy.Item):

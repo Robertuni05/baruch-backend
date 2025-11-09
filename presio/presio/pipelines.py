@@ -33,21 +33,18 @@ class SaveProductPipeline:
         self.cur = self.conn.cursor()
         # self.cur.execute(""" """)
 
-    from datetime import datetime
-
     def process_item(self, item, spider):
-        current_date = datetime.now()  # Get the current date/time
-
+        adapter = ItemAdapter(item)
+        
         self.cur.execute("""
             INSERT INTO product (
                 id, 
                 name, 
-                categoryid,
-                price,
-                priceonline,
-                pricecurrency,
-                discount,
-                updatedate
+                regular_price,
+                online_price,
+                discount_pct,
+                url,                
+                category_id
             ) VALUES (
                 %s, 
                 %s, 
@@ -55,26 +52,16 @@ class SaveProductPipeline:
                 %s,
                 %s,
                 %s,
-                %s,
                 %s
             )
-            ON DUPLICATE KEY UPDATE
-                name = VALUES(name),
-                categoryid = VALUES(categoryid),
-                price = VALUES(price),
-                priceonline = VALUES(priceonline),
-                pricecurrency = VALUES(pricecurrency),
-                discount = VALUES(discount),
-                updatedate = NOW()
             """, (
-            item['id'],
-            item['name'],
+            item['product_id'],
+            item['product_name'],
+            item['regular_price'],
+            item['online_price'],
+            item['discount_percentage'],
+            item['product_url'],
             1,
-            item['price'],
-            item.get('priceonline', None),
-            item.get('pricecurrency', None),
-            item.get('discount', None),
-            current_date
         ))
 
         self.conn.commit()
