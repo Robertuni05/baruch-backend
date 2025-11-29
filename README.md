@@ -6,6 +6,9 @@ API to get product --- prices test how to use stash.
 
 ## Installation
 
+
+scrapy crawl hume  --loglevel INFO --logfile server.log
+
 ### 1. Create Conda Environment
 
 ```bash

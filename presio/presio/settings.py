@@ -56,6 +56,7 @@ DOWNLOAD_HANDLERS = {
 }
 TWISTED_REACTOR = "twisted.internet.asyncioreactor.AsyncioSelectorReactor"
 PLAYWRIGHT_BROWSER_TYPE = "chromium"
+PLAYWRIGHT_DEFAULT_NAVIGATION_TIMEOUT = 300 * 1000  # 10 seconds
 
 
 # Enable or disable extensions

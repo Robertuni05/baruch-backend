@@ -1,5 +1,4 @@
 import scrapy
-from scrapy.http import HtmlResponse
 from scrapy_playwright.page import PageMethod
 from presio.items import ProductItem
 
@@ -8,36 +7,40 @@ class HumeSpider(scrapy.Spider):
     name = "hume"
 
     def start_requests(self):
-        url = "https://www.wong.pe/mascotas/para-gatos"
+        url = "https://www.wong.pe/dermocosmetica"
         self.logger.info(f"********* URL: {url}")
         yield scrapy.Request(
             url=url,
             meta={
                 "playwright": True,
+                # "playwright_include_page": True,
                 'playwright_page_methods': [
+                    PageMethod('wait_for_timeout', 30000),
                     # Scroll to load all products
-                    PageMethod(
-                        'evaluate', 'window.scrollTo(0, document.body.scrollHeight)'),
-                    PageMethod('wait_for_timeout', 2000),  # Wait 2 seconds
-                    PageMethod(
-                        'evaluate', 'window.scrollTo(0, document.body.scrollHeight)'),
-                    PageMethod('wait_for_timeout', 2000),
-                    PageMethod(
-                        'evaluate', 'window.scrollTo(0, document.body.scrollHeight)'),
-                    PageMethod('wait_for_timeout', 2000),
+                    PageMethod('evaluate', 'window.scrollBy(0, document.body.scrollHeight)'),
+                    # PageMethod('wait_for_selector', "[href='https://www.wong.pe/dermocosmetica?page=2']"),
+                    # PageMethod('evaluate', 'window.scrollBy(0, document.body.scrollHeight)'),
+                    PageMethod('wait_for_selector', "[data-af-element='search-result']:nth-child(30)"),
+                    # PageMethod('evaluate', 'window.scrollTo(0, document.body.scrollHeight)'),
+                    # PageMethod('wait_for_timeout', 1000),
                 ],
             },
             callback=self.parse
         )
+        
+    # Passing callable objects
+    # async def scroll_page(page: Page) -> str:
+    #     await page.evaluate("window.scrollBy(0, document.body.scrollHeight)")
+    #     return page.url           
 
-    async def parse(self, response):
+    def parse(self, response):
         """Extract all products from the page using XPath selectors"""
 
         # Find all product containers
         products = response.xpath(
             '//div[contains(@class, "wongio-cmedia-integration-cencosud-1-x-galleryItem")]')
 
-        self.logger.info(f'Found {len(products)} products on the page')
+        self.logger.info(f'********** Found {len(products)} products on the page')
 
         for idx, product in enumerate(products, 1):
             # Product name
@@ -74,19 +77,51 @@ class HumeSpider(scrapy.Spider):
 
             # Product ID
             product_id = product.xpath('./@data-af-product-id').get()
-            print(f"############### this is a product price {online_price}")
+
             product_item = ProductItem()
             product_item['product_id'] = product_id
             product_item['product_name'] = name.strip() if name else None
-            product_item['regular_price'] = float(regular_price) if regular_price else None
-            product_item['online_price'] = float(online_price) if regular_price else None
-            product_item['discount_percentage'] = int(discount) if discount and discount.isdigit() else None
+            product_item['regular_price'] = float(
+                regular_price) if regular_price else None
+            product_item['online_price'] = float(
+                online_price) if regular_price else None
+            product_item['discount_percentage'] = int(
+                discount) if discount and discount.isdigit() else None
             product_item['product_url'] = f"https://www.wong.pe{product_url}" if product_url else None
 
-            self.logger.info(
-                f'Product {idx}: {name} - Discount: {discount}%'
-                if has_discount
-                else f'Product {idx}: {name} - No discount'
-            )
-
             yield product_item
+
+        next_page = response.xpath("//link[@rel='next']/@href").get()
+        self.logger.info(f"**********next page is {next_page}")
+
+        # if next_page is not None:
+        #     yield scrapy.Request(
+        #         url=next_page,
+        #         meta={
+        #             "playwright": True,
+        #             'playwright_page_methods': [
+        #                 # Wait for initial page load
+        #                 PageMethod('wait_for_timeout', 2000),
+        #                 # More aggressive scrolling pattern for pages with more content
+        #                 PageMethod('evaluate', 'window.scrollTo(0, document.body.scrollHeight)'),
+        #                 PageMethod('wait_for_timeout', 4000),
+        #                 PageMethod('evaluate', 'window.scrollTo(0, document.body.scrollHeight)'),
+        #                 PageMethod('wait_for_timeout', 4000),
+        #                 PageMethod('evaluate', 'window.scrollTo(0, document.body.scrollHeight)'),
+        #                 PageMethod('wait_for_timeout', 4000),
+        #                 PageMethod('evaluate', 'window.scrollTo(0, document.body.scrollHeight)'),
+        #                 PageMethod('wait_for_timeout', 4000),
+        #                 PageMethod('evaluate', 'window.scrollTo(0, document.body.scrollHeight)'),
+        #                 PageMethod('wait_for_timeout', 4000),
+        #                 # Additional scrolls to ensure all content is loaded
+        #                 PageMethod('evaluate', 'window.scrollTo(0, document.body.scrollHeight)'),
+        #                 PageMethod('wait_for_timeout', 3000),
+        #                 PageMethod('evaluate', 'window.scrollTo(0, document.body.scrollHeight)'),
+        #                 PageMethod('wait_for_timeout', 3000),
+        #                 # Final scroll and wait
+        #                 PageMethod('evaluate', 'window.scrollTo(0, document.body.scrollHeight)'),
+        #                 PageMethod('wait_for_timeout', 5000),
+        #             ],
+        #         },
+        #         callback=self.parse
+        #     )

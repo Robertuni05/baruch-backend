@@ -13,3 +13,5 @@ db mysql
 >BUG_01 a veces al ejecutar el scrapy en primera, pareciera 
 que el middleware no logra traer el json de productos.
 
+19.11.2025
+>ponerle log, escribir en un archivo
