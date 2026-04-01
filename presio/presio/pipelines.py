@@ -7,7 +7,6 @@
 # useful for handling different item types with a single interface
 import mysql.connector
 from itemadapter import ItemAdapter
-from datetime import datetime
 import logging
 
 
@@ -16,7 +15,9 @@ class PresioPipeline:
         adapter = ItemAdapter(item)
         # add PRODUCT sufix
         # field_names = adapter.field_names()
-        adapter['name'] = 'Producto ' + adapter.get('name')
+        adapter['product_id'] = adapter.get('product_id')
+        adapter['product_name'] = adapter.get('product_name')
+        adapter['regular_price'] = adapter.get('regular_price')
 
         return item
 

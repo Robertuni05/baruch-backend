@@ -12,7 +12,7 @@ scrapy crawl hume  --loglevel INFO --logfile server.log
 ### 1. Create Conda Environment
 
 ```bash
-conda create -n presio
+conda create --name presio python=3.11
 conda activate presio
 conda install pip
 ```

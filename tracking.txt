@@ -15,3 +15,8 @@ que el middleware no logra traer el json de productos.
 
 19.11.2025
 >ponerle log, escribir en un archivo
+
+26.01.2025
+TODO: la cantidad total de items podria cambiar
+cada cierto tiempo por lo tanto se podria actualizar
+eso cada vez que el batch corr.

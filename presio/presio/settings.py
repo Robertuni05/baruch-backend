@@ -27,7 +27,7 @@ CONCURRENT_REQUESTS_PER_DOMAIN = 1
 DOWNLOAD_DELAY = 1
 
 # Disable cookies (enabled by default)
-#COOKIES_ENABLED = False
+COOKIES_ENABLED = False
 
 # Disable Telnet Console (enabled by default)
 #TELNETCONSOLE_ENABLED = False
@@ -55,8 +55,8 @@ DOWNLOAD_HANDLERS = {
     "https": "scrapy_playwright.handler.ScrapyPlaywrightDownloadHandler",
 }
 TWISTED_REACTOR = "twisted.internet.asyncioreactor.AsyncioSelectorReactor"
-PLAYWRIGHT_BROWSER_TYPE = "chromium"
-PLAYWRIGHT_DEFAULT_NAVIGATION_TIMEOUT = 300 * 1000  # 10 seconds
+PLAYWRIGHT_BROWSER_TYPE = "firefox"
+PLAYWRIGHT_DEFAULT_NAVIGATION_TIMEOUT = 300 * 1000  # 300 seconds
 
 
 # Enable or disable extensions
@@ -69,7 +69,7 @@ PLAYWRIGHT_DEFAULT_NAVIGATION_TIMEOUT = 300 * 1000  # 10 seconds
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
     #"presio.pipelines.PresioPipeline": 300,
-    "presio.pipelines.SaveProductPipeline": 400,
+    #"presio.pipelines.SaveProductPipeline": 400,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
