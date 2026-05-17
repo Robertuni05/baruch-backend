@@ -1,0 +1,40 @@
+supermarkets:
+  wong:
+    base_url: https://www.wong.pe
+  plazavea:
+    base_url: https://www.plazavea.com.pe
+
+# Logical categories — each maps to one or more store-specific URL paths.
+# category_id matches the `category` table in the database.
+# Spiders read their own store key and iterate over all URLs listed.
+categories:
+  - id: 1
+    name: tecnologia
+    stores:
+      wong:
+        urls:
+          - /tecnologia
+      plazavea:
+        urls:
+          - /tecnologia
+
+  - id: 2
+    name: higiene_y_belleza
+    stores:
+      wong:
+        urls:
+          - /higiene-salud-y-belleza
+      plazavea:
+        urls:
+          - /cuidado-personal-y-salud
+          - /belleza
+
+  - id: 3
+    name: electrohogar
+    stores:
+      wong:
+        urls:
+          - /electrohogar
+      plazavea:
+        urls:
+          - /electrohogar

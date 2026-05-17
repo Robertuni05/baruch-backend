@@ -1,0 +1,198 @@
+wong https://www.wong.pe
+
+frutas-y-verduras
+    /frutas-y-verduras          678
+
+carnes-aves-y-pescados
+    /carnes-aves-y-pescados     709
+
+desayuno
+    /desayuno                   1410
+
+lacteos
+    /lacteos                    1029
+
+embutidos-y-fiambres
+    /embutidos-y-fiambres       560
+
+abarrotes
+    /abarrotes                  3588
+
+panaderia-y-pasteleria
+    /panaderia-y-pasteleria     595
+
+comidas-y-rostizados
+    /comidas-y-rostizados       275
+
+congelados
+    /congelados                 526
+
+aguas-y-bebidas
+    /aguas-y-bebidas            584
+
+cervezas-vinos-y-licores
+    /cervezas-vinos-y-licores   2689
+
+limpieza
+    /limpieza                   1409
+
+higiene-salud-y-belleza
+    /higiene-salud-y-belleza    2938
+
+dermocosmetica
+    /dermocosmetica             127
+
+navidad
+    /navidad                    1016
+
+electrohogar
+    /electrohogar               405
+
+tecnologia
+    /tecnologia                 266
+
+hogar-y-bazar
+    /hogar-y-bazar              5109
+
+dormitorio
+    /dormitorio                 2432
+
+ninos-y-bebes
+    /ninos-y-bebes              1104
+
+mascotas
+    /mascotas                   1193
+
+la-jugueteria
+    /la-jugueteria              2589
+
+deportes-y-outdoors
+    /deportes-y-outdoors        489
+
+# ==========================================
+
+plazavea https://www.plazavea.com.pe
+
+# === FOOD ===
+frutas-y-verduras
+    /frutas-y-verduras
+
+carnes-aves-y-pescados
+    /carnes-aves-y-pescados
+
+desayunos
+    /desayunos
+
+lacteos-y-huevos
+    /lacteos-y-huevos
+
+quesos-y-fiambres
+    /quesos-y-fiambres
+
+panaderia-y-pasteleria
+    /panaderia-y-pasteleria
+
+congelados
+    /congelados
+
+abarrotes
+    /abarrotes/snacks-y-piqueos
+    /abarrotes/arroz
+    /abarrotes/aceite
+    /abarrotes/azucar-y-endulzantes
+    /abarrotes/menestras
+    /abarrotes/fideos-pastas-y-salsas
+    /abarrotes/conservas
+    /abarrotes/salsas-cremas-y-condimentos
+    /abarrotes/comidas-instantaneas
+    /abarrotes/galletas-y-golosinas
+    /abarrotes/chocolateria
+
+bebidas
+    /bebidas/aguas
+    /bebidas/gaseosas
+    /bebidas/jugos-y-otras-bebidas
+    /bebidas/bebidas-funcionales
+
+# === PERSONAL CARE ===
+cuidado-personal-y-salud
+    /cuidado-personal-y-salud/cuidado-del-cabello
+    /cuidado-personal-y-salud/cuidado-bucal
+    /cuidado-personal-y-salud/afeitado
+    /cuidado-personal-y-salud/higiene-personal
+    /cuidado-personal-y-salud/proteccion-femenina
+    /cuidado-personal-y-salud/vitaminas-y-nutricion
+    /cuidado-personal-y-salud/salud
+    /cuidado-personal-y-salud/depilacion
+
+belleza
+    /belleza
+
+# === CLEANING ===
+limpieza
+    /limpieza/cuidado-de-la-ropa
+    /limpieza/cuidado-del-hogar
+    /limpieza/limpieza-de-cocina
+    /limpieza/limpieza-de-bano
+    /limpieza/papel-para-el-hogar
+
+# === PETS ===
+mascotas
+    /mascotas/comida-para-perros
+    /mascotas/salud-e-higiene-para-perros
+    /mascotas/accesorios-para-perros
+    /mascotas/comida-para-gatos
+    /mascotas/salud-e-higiene-para-gatos
+    /mascotas/accesorios-para-gatos
+    /mascotas/otras-mascotas
+
+# === TECH & APPLIANCES ===
+tecnologia
+    /tecnologia/telefonia/celulares-y-smartphones
+    /tecnologia/telefonia/accesorios-para-celulares
+    /tecnologia/telefonia/smartwatch
+    /tecnologia/telefonia/cases-y-micas
+    /tecnologia/telefonia/cargadores-y-cables
+    /tecnologia/computo/laptops
+    /tecnologia/computo/tablets
+    /tecnologia/audio
+    /tecnologia/television
+    /tecnologia/videojuegos
+    /tecnologia/fotografia
+
+electrohogar
+    /electrohogar/cocinas
+    /electrohogar/lavado
+    /electrohogar/refrigeracion
+    /electrohogar/electrodomesticos-de-cocina
+    /electrohogar/climatizacion
+    /electrohogar/herramientas-electricas
+    /electrohogar/electrodomesticos-del-hogar
+
+# === OTHER ===
+decohogar
+    /decohogar
+
+mejoramiento-del-hogar
+    /mejoramiento-del-hogar
+
+dormitorio
+    /dormitorio
+
+juguetes-y-juegos
+    /juguetes-y-juegos
+
+deportes
+    /deportes
+
+bebe-e-infantil
+    /bebe-e-infantil
+
+libreria-y-oficina
+    /libreria-y-oficina
+
+pollo-rostizado-y-comidas-preparadas
+    /pollo-rostizado-y-comidas-preparadas
+
+mercado-saludable
+    /mercado-saludable

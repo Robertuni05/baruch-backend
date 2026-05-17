@@ -4,10 +4,13 @@ import scrapy
 
 class ProductItem(scrapy.Item):
     product_id = scrapy.Field()
+    store_id = scrapy.Field()
     product_name = scrapy.Field()
+    category_id = scrapy.Field()
     regular_price = scrapy.Field()
     online_price = scrapy.Field()
     discount_percentage = scrapy.Field()
+    currency = scrapy.Field()
     product_url = scrapy.Field()
 
 

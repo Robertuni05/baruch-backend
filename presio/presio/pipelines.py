@@ -1,25 +1,7 @@
-# Define your item pipelines here
-#
-# Don't forget to add your pipeline to the ITEM_PIPELINES setting
-# See: https://docs.scrapy.org/en/latest/topics/item-pipeline.html
-
-
-# useful for handling different item types with a single interface
 import mysql.connector
 from itemadapter import ItemAdapter
 import logging
-
-
-class PresioPipeline:
-    def process_item(self, item, spider):
-        adapter = ItemAdapter(item)
-        # add PRODUCT sufix
-        # field_names = adapter.field_names()
-        adapter['product_id'] = adapter.get('product_id')
-        adapter['product_name'] = adapter.get('product_name')
-        adapter['regular_price'] = adapter.get('regular_price')
-
-        return item
+from datetime import datetime
 
 
 class SaveProductPipeline:
@@ -31,56 +13,55 @@ class SaveProductPipeline:
             password='Peru123.,',
             database='presio'
         )
-
         self.cur = self.conn.cursor()
         self.logger = logging.getLogger(__name__)
 
     def process_item(self, item, spider):
-        adapter = ItemAdapter(item)
-        
+        now = datetime.now()
         try:
-            # Use INSERT IGNORE to prevent integrity key errors
-            # This will silently skip duplicate records based on primary key
             self.cur.execute("""
-                INSERT IGNORE INTO product (
-                    id, 
-                    name, 
+                INSERT INTO product (
+                    id,
+                    store_id,
+                    name,
+                    category_id,
                     regular_price,
                     online_price,
                     discount_pct,
-                    url,                
-                    category_id
-                ) VALUES (
-                    %s, 
-                    %s, 
-                    %s,
-                    %s,
-                    %s,
-                    %s,
-                    %s
-                )
-                """, (
+                    currency,
+                    created_at,
+                    updated_at
+                ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+                ON DUPLICATE KEY UPDATE
+                    name         = VALUES(name),
+                    category_id  = VALUES(category_id),
+                    regular_price= VALUES(regular_price),
+                    online_price = VALUES(online_price),
+                    discount_pct = VALUES(discount_pct),
+                    currency     = VALUES(currency),
+                    updated_at   = VALUES(updated_at)
+            """, (
                 item['product_id'],
+                item['store_id'],
                 item['product_name'],
-                item['regular_price'],
-                item['online_price'],
-                item['discount_percentage'],
-                item['product_url'],
-                1,
+                item.get('category_id'),
+                item.get('regular_price'),
+                item.get('online_price'),
+                item.get('discount_percentage'),
+                item.get('currency', 'PEN'),
+                now,
+                now,
             ))
-
             self.conn.commit()
-            
-            # Log if the record was actually inserted
-            if self.cur.rowcount > 0:
-                self.logger.info(f"Inserted new product: {item['product_id']}")
+
+            if self.cur.rowcount == 1:
+                self.logger.info(f"Inserted product: {item['product_id']}")
             else:
-                self.logger.info(f"Product already exists, skipped: {item['product_id']}")
-                
+                self.logger.info(f"Updated product: {item['product_id']}")
+
         except mysql.connector.Error as e:
             self.logger.error(f"Database error for product {item['product_id']}: {e}")
-            # Don't re-raise the exception to continue processing other items
-            
+
         return item
 
     def close_spider(self, spider):
