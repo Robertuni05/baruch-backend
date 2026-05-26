@@ -29,9 +29,10 @@ class SaveProductPipeline:
                     online_price,
                     discount_pct,
                     currency,
+                    url,
                     created_at,
                     updated_at
-                ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+                ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
                 ON DUPLICATE KEY UPDATE
                     name         = VALUES(name),
                     category_id  = VALUES(category_id),
@@ -39,6 +40,7 @@ class SaveProductPipeline:
                     online_price = VALUES(online_price),
                     discount_pct = VALUES(discount_pct),
                     currency     = VALUES(currency),
+                    url          = VALUES(url),
                     updated_at   = VALUES(updated_at)
             """, (
                 item['product_id'],
@@ -49,6 +51,7 @@ class SaveProductPipeline:
                 item.get('online_price'),
                 item.get('discount_percentage'),
                 item.get('currency', 'PEN'),
+                item.get('product_url'),
                 now,
                 now,
             ))

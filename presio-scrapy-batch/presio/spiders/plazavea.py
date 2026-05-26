@@ -89,7 +89,7 @@ class PlazaVeaSpider(scrapy.Spider):
             discount_percentage = round((list_price - online_price) / list_price * 100)
 
         item = ProductItem()
-        item["product_id"] = product.get("productId")
+        item["product_id"] = f"{self.store_id}_{product.get('productId')}"
         item["store_id"] = self.store_id
         item["product_name"] = product.get("productName")
         item["category_id"] = category_id

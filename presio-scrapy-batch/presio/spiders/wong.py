@@ -144,7 +144,7 @@ class WongSpider(scrapy.Spider):
                 no_change_count = 0
 
             await page.evaluate("window.scrollTo(0, document.body.scrollHeight)")
-            await page.wait_for_timeout(4000)
+            await page.wait_for_timeout(5000)
 
             previous_count = current_count
             scroll_attempts += 1
@@ -197,7 +197,7 @@ class WongSpider(scrapy.Spider):
         product_id = product.xpath("./@data-af-product-id").get()
 
         item = ProductItem()
-        item["product_id"] = product_id
+        item["product_id"] = f"{self.store_id}_{product_id}"
         item["store_id"] = self.store_id
         item["product_name"] = name.strip() if name else None
         item["category_id"] = category_id

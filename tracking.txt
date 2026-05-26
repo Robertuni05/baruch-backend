@@ -20,3 +20,8 @@ que el middleware no logra traer el json de productos.
 TODO: la cantidad total de items podria cambiar
 cada cierto tiempo por lo tanto se podria actualizar
 eso cada vez que el batch corr.
+
+16.05.2005
+se afinaron las categorias a usar en el achivo config.yaml.
+que pendiente afinal el pipelines para guardar la info en bd,
+crear spider para otro store.

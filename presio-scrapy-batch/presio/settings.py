@@ -69,7 +69,7 @@ PLAYWRIGHT_DEFAULT_NAVIGATION_TIMEOUT = 300 * 1000  # 300 seconds
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
     #"presio.pipelines.PresioPipeline": 300,
-    #"presio.pipelines.SaveProductPipeline": 400,
+    "presio.pipelines.SaveProductPipeline": 400,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)

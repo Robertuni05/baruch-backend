@@ -1,0 +1,187 @@
+================================================================================
+PRESIO SCRAPER — DIAGNOSTIC LOG
+================================================================================
+Format: one entry per incident
+Columns: DATE | SPIDER | COMMAND | PROBLEM | ERROR | ROOT CAUSE | DETAIL |
+         REFERENCES | FIX APPLIED | STATUS
+================================================================================
+
+────────────────────────────────────────────────────────────────────────────────
+ENTRY #001
+────────────────────────────────────────────────────────────────────────────────
+DATE          : 2026-05-17
+SPIDER        : wong
+COMMAND       : python main.py --supermarket wong --category tecnologia
+                --output out.json --loglevel INFO
+PROBLEM       : Scraping stops after page 1; page 2 crashes silently
+ERROR         : Page.evaluate: Execution context was destroyed, most likely
+                because of a navigation
+LOG LINE      : [wong] ERROR: ✗ Error on page #2 — https://www.wong.pe/tecnologia?page=2
+OUTCOME       : 60/61+ products saved (only page 1). Spider exits with
+                finish_reason: finished — no retry, no alert.
+
+────────────────────────────────────────────────────────────────────────────────
+ROOT CAUSE    : Race condition between Playwright's page.evaluate() and the
+                VTEX SPA internal navigation (hydration re-routing).
+────────────────────────────────────────────────────────────────────────────────
+
+DIAGNOSTIC DETAIL
+─────────────────
+
+  The spider navigates to page 2 via a new Playwright context. The code path is:
+
+    parse_with_scroll()
+      └─ await page.wait_for_selector('[data-af-element="search-result"]')
+      └─ await _scroll_and_load_products(page)
+              └─ current_count = await page.evaluate(...)  ← CRASH HERE
+
+  The selector fires as soon as the DOM element is painted, which happens early
+  during the React hydration phase. At that same moment, the VTEX SPA triggers
+  an internal client-side re-navigation to reconcile the URL state, destroying
+  the V8 execution context that Playwright was using.
+
+  Timeline on page 2 (reconstructed from log timestamps):
+
+    06:43:37.000  Playwright navigates to /tecnologia?page=2
+    06:43:37.???  Server responds with SSR HTML (pre-rendered product cards)
+    06:43:37.???  wait_for_selector fires — DOM element already present in SSR
+    06:43:38.000  page.evaluate() is called inside scroll loop
+    06:43:38.???  React JS bundle executes → hydration starts
+    06:43:38.???  VTEX Search App detects ?page=2 → triggers client-side
+                  navigation (React Router pushState or full reload)
+    06:43:38.000  V8 context destroyed → page.evaluate() throws
+
+  Gap between "PROCESSING PAGE #2" and the ERROR: < 1 second, confirming the
+  crash happens before any scroll even starts.
+
+────────────────────────────────────────────────────────────────────────────────
+WHAT IS THE REACT HYDRATION CYCLE?
+────────────────────────────────────────────────────────────────────────────────
+
+  VTEX IO storefronts use React with Server-Side Rendering (SSR). When a URL is
+  requested, the server sends a fully pre-rendered HTML page. This allows the
+  browser to paint content immediately. Then:
+
+  PHASE 1 — Initial Paint (SSR HTML)
+  ┌─────────────────────────────────────────────────────────────┐
+  │  Server renders React tree → sends static HTML to browser   │
+  │  Browser paints the page visually                           │
+  │  DOM elements exist, but have NO event listeners yet         │
+  │  wait_for_selector() can already match elements here!       │
+  └─────────────────────────────────────────────────────────────┘
+
+  PHASE 2 — JS Bundle Load
+  ┌─────────────────────────────────────────────────────────────┐
+  │  Browser downloads React + VTEX app JS bundles              │
+  │  Several hundred kB of JS (confirmed: 175 scripts in log)   │
+  └─────────────────────────────────────────────────────────────┘
+
+  PHASE 3 — Hydration (THE DANGEROUS PHASE)
+  ┌─────────────────────────────────────────────────────────────┐
+  │  ReactDOM.hydrateRoot() is called                           │
+  │  React "takes over" the SSR HTML:                           │
+  │    - Attaches event listeners                               │
+  │    - Reconciles virtual DOM with real DOM                   │
+  │    - Initializes component state                            │
+  │  VTEX Search App reads URL params (?page=2)                 │
+  │  → Triggers internal navigation / state re-sync             │
+  │  → This can fire a full page reload or pushState + re-fetch │
+  │  → The V8 execution context Playwright holds is DESTROYED   │
+  └─────────────────────────────────────────────────────────────┘
+
+  PHASE 4 — Stable State
+  ┌─────────────────────────────────────────────────────────────┐
+  │  React tree fully reconciled                                │
+  │  No more navigations happening                              │
+  │  page.evaluate() is safe to call here                       │
+  └─────────────────────────────────────────────────────────────┘
+
+  The bug: wait_for_selector fires in Phase 1, but page.evaluate() needs
+  Phase 4. The code jumps to evaluate() while still in Phase 3.
+
+  Analogy: you walk into a room, see furniture (Phase 1), but the builders
+  are still moving walls (Phase 3). Trying to measure the room then gives
+  wrong results or causes an accident.
+
+────────────────────────────────────────────────────────────────────────────────
+WHY DOES PAGE 1 WORK BUT PAGE 2 FAILS?
+────────────────────────────────────────────────────────────────────────────────
+
+  Page 1 opens in a freshly launched browser. Playwright's browser startup
+  itself takes ~2 seconds (log shows 06:42:40 → 06:42:55 = 15 sec for first
+  content). By the time wait_for_selector fires, the page has had time to
+  settle. The JS bundles are also cached after page 1, so page 2 hydrates
+  much faster — making the race condition more likely to be lost.
+
+  Page 2 is also opened as a completely new Playwright context
+  (playwright_context_kwargs is passed fresh each time), so browser cache
+  state is not shared between pages.
+
+────────────────────────────────────────────────────────────────────────────────
+REFERENCES
+────────────────────────────────────────────────────────────────────────────────
+
+  [1] Playwright — Navigations and loading
+      https://playwright.dev/docs/navigations
+      Relevant section: "Execution context was destroyed" — occurs when a new
+      navigation starts before an evaluate() resolves.
+
+  [2] Playwright — page.wait_for_load_state()
+      https://playwright.dev/docs/api/class-page#page-wait-for-load-state
+      States: 'load' | 'domcontentloaded' | 'networkidle'
+      'networkidle' = no network requests for 500ms — safest for SPAs.
+
+  [3] React — hydrateRoot()
+      https://react.dev/reference/react-dom/client/hydrateRoot
+      "React will attach to the HTML that exists inside the domNode, and take
+      over managing the DOM inside it." — explains why DOM exists before React
+      is ready.
+
+  [4] VTEX IO — Store Framework architecture
+      https://developers.vtex.com/docs/guides/vtex-io-documentation-what-is-vtex-store-framework
+      VTEX IO is a React SPA hosted on Fastly CDN. The search/catalog pages
+      use @vtex/search-result app which manages pagination state client-side.
+
+  [5] Playwright Python — Known issue with SPA navigation and evaluate()
+      https://github.com/microsoft/playwright/issues/8114
+      Community-confirmed: wait_for_selector is not sufficient for SPAs;
+      wait_for_load_state('networkidle') is the recommended solution.
+
+────────────────────────────────────────────────────────────────────────────────
+MINIMAL REPRODUCTION SAMPLE
+────────────────────────────────────────────────────────────────────────────────
+
+  # BUGGY pattern (current code — presio/spiders/wong.py line 77-78)
+  await page.wait_for_selector('[data-af-element="search-result"]', timeout=30000)
+  await self._scroll_and_load_products(page)  # evaluate() called too early
+
+  # Inside _scroll_and_load_products (line 133):
+  current_count = await page.evaluate(
+      "() => document.querySelectorAll('[data-af-element=\"search-result\"]').length"
+  )
+  # ^ CRASHES if SPA re-navigates during hydration
+
+  ─────────────────────────────────────────────────────────────────────────────
+
+  # FIXED pattern
+  await page.wait_for_selector('[data-af-element="search-result"]', timeout=30000)
+  await page.wait_for_load_state('networkidle', timeout=15000)  # ← add this
+  await self._scroll_and_load_products(page)
+
+  # OR with retry on the specific error inside _scroll_and_load_products:
+  try:
+      current_count = await page.evaluate(...)
+  except Exception as e:
+      if "Execution context was destroyed" in str(e):
+          await page.wait_for_load_state('networkidle', timeout=10000)
+          current_count = await page.evaluate(...)  # retry once
+      else:
+          raise
+
+────────────────────────────────────────────────────────────────────────────────
+FIX APPLIED   : Added await page.wait_for_load_state('networkidle', timeout=7000)
+                between wait_for_selector() and _scroll_and_load_products()
+                in presio/spiders/wong.py line 78
+STATUS        : FIXED
+PRIORITY      : HIGH (data loss: unknown number of page-2+ products missed)
+────────────────────────────────────────────────────────────────────────────────
