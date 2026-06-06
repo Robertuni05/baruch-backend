@@ -3,6 +3,9 @@ supermarkets:
     base_url: https://www.wong.pe
   plazavea:
     base_url: https://www.plazavea.com.pe
+  falabella:
+    base_url: https://www.falabella.com.pe
+
 
 # Logical categories — each maps to one or more store-specific URL paths.
 # category_id matches the `category` table in the database.
@@ -17,6 +20,10 @@ categories:
       plazavea:
         urls:
           - /tecnologia
+      falabella:
+        urls:
+          - /falabella-pe/category/cat50678/Computadoras
+          - /falabella-pe/category/cat6370551/Televisores-Smart-TV      
 
   - id: 2
     name: higiene_y_belleza

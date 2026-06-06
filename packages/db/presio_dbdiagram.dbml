@@ -1,0 +1,48 @@
+// Presio — DB Diagram
+// Paste this at https://dbdiagram.io/d
+
+Table store {
+  id   int         [pk, note: "Manual seed: 1=Plaza Vea, 2=Wong, 3=Falabella"]
+  name varchar(255) [not null]
+}
+
+Table category {
+  id   int          [pk, note: "Manual seed: 1=tecnologia, 2=higiene_y_belleza, 3=electrohogar, 4=mascotas, 5=despensa"]
+  name varchar(255) [not null, note: "snake_case ASCII, no accents"]
+}
+
+Table product {
+  id            varchar(64)    [pk, note: "Format: {store_id}_{raw_id}"]
+  store_id      int            [not null, ref: > store.id]
+  name          varchar(1000)  [not null]
+  category_id   int            [ref: > category.id]
+  regular_price decimal(18,2)
+  online_price  decimal(18,2)
+  discount_pct  decimal(10,2)
+  currency      varchar(5)
+  url           varchar(500)
+  canonical_id  int            [ref: > canonical_product.id, note: "NULL until matching job runs"]
+  created_at    datetime
+  updated_at    datetime
+}
+
+Table canonical_product {
+  id          int          [pk, increment]
+  name        varchar(255) [not null, note: "FULLTEXT index ft_name"]
+  category_id int          [not null, ref: > category.id]
+  created_at  timestamp    [default: `CURRENT_TIMESTAMP`]
+}
+
+Table product_match {
+  id               int                              [pk, increment]
+  canonical_id     int                              [not null, ref: > canonical_product.id]
+  product_id       varchar(50)                      [not null]
+  store_id         int                              [not null, ref: > store.id]
+  similarity_score float                            [not null]
+  status           enum('auto_matched','needs_review') [not null, default: 'needs_review']
+  matched_at       timestamp                        [default: `CURRENT_TIMESTAMP`]
+
+  indexes {
+    (canonical_id, product_id, store_id) [unique, name: "uq_match"]
+  }
+}

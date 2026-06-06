@@ -6,12 +6,13 @@ from scrapy.utils.project import get_project_settings
 SPIDERS = {
     "wong": "presio.spiders.wong.WongSpider",
     "plazavea": "presio.spiders.plazavea.PlazaVeaSpider",
+    "falabella": "presio.spiders.falabella.FalabellaSpider",
 }
 
 
 def main():
     parser = argparse.ArgumentParser(description="Presio scraper")
-    parser.add_argument("--supermarket", type=str, default="wong", choices=SPIDERS.keys(), help="Supermarket to scrape (default: wong)")
+    parser.add_argument("--supermarket", type=str, default="wong", choices=SPIDERS.keys(), help="Supermarket to scrape (default: wong, choices: wong, plazavea, falabella)")
     parser.add_argument("--max-scrolls", type=int, default=5, help="Max scroll attempts per page (default: 7)")
     parser.add_argument("--no-change-limit", type=int, default=5, help="Stop scrolling after N scrolls with no new products (default: 5)")
     parser.add_argument("--max-pages", type=int, default=None, help="Max pages per category (default: unlimited)")
