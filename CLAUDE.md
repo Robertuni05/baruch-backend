@@ -38,16 +38,21 @@ Spiders, pipelines, and routes are **artifacts** — implementation details insi
 
 **Never reads:** `canonical_product` or `product_match`.
 
-### Matching Batch (lives inside `presio-scrapy-batch` for now)
+### Processing Batch (lives inside `presio-scrapy-batch` for now)
 
-**Responsibility:** Enrich scraped products by computing similarity scores against canonical
-products. Populate `product_match` and stamp `canonical_id` on matched `product` rows.
+**Responsibility:** In a single pass, match each unmatched product to an existing
+canonical (`>=0.85` auto, `0.65–0.84` review) or mint a new canonical when none fits.
+Populate `canonical_product` + `product_match` and stamp `canonical_id` on matched rows.
+This replaces the former normalize + score two-step (which re-ran fuzzy matching twice
+with divergent thresholds and could leave orphan canonicals).
 
-**Artifacts:** `matching/run_matching.py`, `FuzzyMatchStrategy`
+**Artifacts:** `processing/match/run_match.py`, `CanonicalNameStrategy` (ABC) +
+`PassthroughStrategy`, `processing/text.py` (shared normalization helpers)
 
-**Reads:** `product` (unmatched rows), `canonical_product` (seeded manually by admin)
+**Reads:** `product` (unmatched rows), `canonical_product` (auto-grown by the batch;
+may also be seeded manually)
 
-**Writes:** `product_match`, `product.canonical_id`
+**Writes:** `canonical_product`, `product_match`, `product.canonical_id`
 
 ### Presio API (`presio-api`)
 
@@ -62,14 +67,16 @@ products. Populate `product_match` and stamp `canonical_id` on matched `product`
 ## Data Flow
 
 ```
-[Admin seeds canonical_product manually]
-
 presio-scrapy-batch
   └── Spider scrapes store pages
   └── Pipeline upserts → product table (canonical_id = NULL)
-  └── Matching job runs after scrape
+  └── Processing batch runs after scrape (single pass: processing.run_pipeline)
         reads  → product (WHERE canonical_id IS NULL)
         reads  → canonical_product
+        for each product (spec-richest first):
+          match existing canonical (>=0.85 auto / 0.65–0.84 review)
+          else mint a new canonical and self-match
+        writes → canonical_product (new identities)
         writes → product_match
         writes → product.canonical_id
 

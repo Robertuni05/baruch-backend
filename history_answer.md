@@ -4,6 +4,173 @@
 
 ---
 
+## Session: 2026-06-07
+
+---
+
+### Topic 15 — Process Step Analysis & Suggested Improvements
+
+Deep review of the post-scrape processing pipeline (`run_pipeline.py` → `normalize` → `score`, sharing `processing/text.py`).
+
+#### How it works today
+
+```
+run_pipeline.py
+ ├─ normalize(conn)                       # build canonical identities
+ │   for each category with unmatched products:
+ │       FuzzyClusterStrategy.canonicalize(raw_names)   # greedy 1-pass cluster @0.88
+ │       → dedup representative vs existing canonicals @0.92 → INSERT canonical_product
+ └─ score(conn)                           # match products → canonicals
+     for each product WHERE canonical_id IS NULL:
+         best canonical in same unit-spec bucket via token_sort_ratio
+         ≥0.85 auto_matched (+ stamp product.canonical_id) | ≥0.65 needs_review | else skip
+```
+
+`text.py` (unit-spec vs bare-number model) is the well-designed foundation; the concerns below are about the two consumers, not the shared layer.
+
+#### Findings by severity
+
+| # | Severity | Finding |
+|---|---|---|
+| 1 | 🔴 Bug | **`score` ignores `category_id`.** `run_score.py` selects all canonicals and buckets only by unit-spec set, so a `tecnologia` product (`"Cargador 20w"`) can match a canonical in another category with the same `{20w}` spec. Fix: include `category_id` in the bucket key (both queries must select it). |
+| 2 | 🟠 Design | **normalize discards its clustering; score recomputes from scratch.** Both run over the same cross-store unmatched products with the same fuzzy logic but different thresholds (0.88 cluster / 0.92 dedup vs 0.85 match). Wasteful, and can produce inconsistency: a product that *created* a canonical may later auto-match a *different* one, or fail 0.85 against its own canonical → orphan canonical. |
+| 3 | 🟠 Quality | **Greedy single-pass clustering is order-dependent.** Each name compares only against each cluster's first member (`rep_norm`), stops at first ≥0.88 (single-linkage, first-fit). The matching anchor (first-seen) differs from the name chosen by `_pick_representative` (most specs). |
+| 4 | 🟡 Perf | **Redundant normalization.** `unit_specs()` and `bare_numbers()` each call `normalize_name()` internally → ~3 normalizations per product and per canonical. Add `functools.lru_cache` to the pure functions in `text.py`. |
+| 5 | 🟡 Quality | **`token_sort_ratio` penalizes subset names.** Cross-store listings differ by extra marketing words; `token_set_ratio`/`WRatio` handle subsets better. Unit-spec + bare-number guards already prevent classic over-matching, so worth an A/B on real data. |
+| 6 | 🟡 Ops | **No observability for threshold tuning.** Step prints only totals. A `--report`/dry-run mode (score distribution, cluster-size histogram, needs_review count) makes 0.85/0.88/0.92 tuning data-driven. |
+| ⚪ | Minor | `_build_index` dedups across all categories globally while inserts are per-category; bare-number conflict conflates model numbers / pack counts / screen sizes; canonical names stored as raw store strings; `run_pipeline` commits normalize before score runs. |
+
+#### Suggested priority order
+
+1. **#1 category isolation** in `score` — real bug, ~5 lines.
+2. **#4 `lru_cache`** — free speedup, zero behavior change.
+3. **#2 unify normalize/score** — removes redundancy + threshold drift (bigger refactor: strategy returns clusters, write matches in one pass).
+4. **#5 `token_set_ratio` trial** + **#6 report mode** — tune thresholds with evidence.
+5. **#3 order-independent clustering** — quality refinement (compare against all members / sort by spec-richness / union-find).
+
+References: RapidFuzz scorers (https://rapidfuzz.github.io/RapidFuzz/Usage/fuzz.html); single- vs complete-linkage agglomerative clustering.
+
+> Status: proposed only — awaiting approval before editing files (per working preferences).
+
+#### Implemented this session
+
+**#1 — Category isolation in `score`** (`processing/score/run_score.py`)
+
+- Canonical query now selects `category_id`; bucket key changed from `unit_specs` to `(category_id, unit_specs)`.
+- Product query now selects `category_id`; lookup uses the composite key.
+- Result: a product can only match a canonical in the **same category** with the same unit-spec set, closing the cross-category false-match (e.g. a 20w charger in tecnologia vs a 20w item elsewhere). Aligns `score` with `normalize` (already per-category).
+- Caveat: rows with `NULL`/mismatched `category_id` now fall in separate buckets and won't match — intended stricter behavior; may show fewer matches on next run.
+- Verified: `python -m py_compile` clean.
+
+**#4 — `lru_cache` on `text.py` pure functions** (`processing/text.py`)
+
+- Added `from functools import lru_cache`; decorated `normalize_name`, `unit_specs`, `bare_numbers` with `@lru_cache(maxsize=100_000)`.
+- Each distinct name now normalized once instead of ~3× per comparison (`unit_specs`/`bare_numbers` call `normalize_name` internally). Safe — functions are pure, args/returns hashable (`str`/`frozenset`).
+- Verified: outputs match docstring examples; `cache_info()` showed a hit on a repeated call.
+
+**#2 — Unify normalize/score into a single pass** (chosen approach: single-pass loop)
+
+- New `processing/match/` package:
+  - `strategy.py` — `CanonicalNameStrategy` ABC (`clean(raw_name) -> str`); the Phase-2 LLM hook.
+  - `passthrough_strategy.py` — `PassthroughStrategy`, returns the founding product's raw name.
+  - `run_match.py` — single pass: load existing canonicals into `(category, unit-spec)` buckets; for each unmatched product (spec-richest first) find best canonical → `≥0.85` auto_matched (+ stamp canonical_id), `≥0.65` needs_review, else **mint** a new canonical and self-match at 1.0.
+- `run_pipeline.py` now calls the one `match` step instead of normalize → score.
+- Removed obsolete modules: `processing/normalize/` and `processing/score/` (superseded). `text.py` stays as shared layer.
+- Why: eliminates double fuzzy matching, the 0.88/0.92 vs 0.85 threshold drift, and orphan canonicals (a minted canonical always has its founding product matched). `needs_review` tier preserved. Processing spec-richest first folds in partial order-independence (richest name founds the canonical, sparser cross-store listings match onto it).
+- Known carry-over: `token_sort_ratio` still penalizes subset names (suggestion #5) — a sparse listing may fail 0.85 vs a rich founder and mint its own canonical. No regression vs old `score`.
+- Docs updated: root `CLAUDE.md` "Matching Batch" → "Processing Batch" section + Data Flow block.
+- Decision recorded: chose single-pass over "keep two steps, share clusters" (user-selected).
+
+**Key finding — cross-store coverage is the real metric, and it was very low**
+
+User correctly challenged "0 unmatched": with 3 different store catalogs, store-unique
+products must exist, so 0 unmatched is suspicious. Root cause: the mint branch gives EVERY
+non-matching product its own singleton canonical (+self-match), so `canonical_id` is never
+NULL after a run. "0 unmatched" therefore measures nothing. The real metric is **canonicals
+matched across >=2 stores** (only those power `/compare`).
+
+Baseline measured (`processing/report.py`): **450 / 21,813 canonicals (2.1%)** comparable.
+21,363 were singletons. Per category: cat1 1.7%, cat2 2.9%, cat3 1.3%.
+Products per store: PV 10,610 · Wong 3,567 · Falabella 13,496.
+
+Root causes of under-merging: (1) bucket key required EXACT unit-spec set equality, so the
+same product described with different spec formatting across stores never even got compared;
+(2) `token_sort_ratio` length penalty split true twins; (3) no brand/semantic awareness.
+
+**#5 + bucket relax — implemented**
+
+- `text.py` `spec_conflict`: exact-equality → **subset** semantics (one store omitting a spec
+  no longer conflicts; genuine value disagreements still do).
+- `run_match.py`: bucket by **category only** (spec_conflict does the rejecting); score with
+  `token_set_ratio` instead of `token_sort_ratio`.
+- **#6 report mode**: `processing/report.py` (`python -m processing.report`) — read-only
+  coverage metrics (the ≥2-store %), per category.
+
+Projected impact (non-destructive in-memory simulation over all 27,673 products):
+canonicals 21,813 → 9,667 (−56%); **comparable 2.1% → 7.7% (~3.6×)**; cat1 6.3%, cat2 10.5%,
+cat3 7.3%. Also surfaced 8,619 products (31%) in the 0.65–0.84 review band — the next
+opportunity (threshold tuning / synonyms / embeddings).
+
+**Full rematch — applied 2026-06-07**
+
+Backed up `product`/`product_match`/`canonical_product` to `backup_presio_20260607_181541.sql`
+(9.6M), then cleaned (FK-safe: NULL `product.canonical_id` → delete `product_match` →
+delete `canonical_product`) and re-ran `processing.run_pipeline` over all 27,673 products.
+
+Run: 6,505 auto-matched, 7,464 minted, **13,704 needs_review (49.5%)**.
+Actual coverage (matches the ~7.7% projection): canonicals 21,813 → 7,464 (−66%);
+**comparable ≥2 stores 450 (2.1%) → 546 (7.3%)**; cat1 5.8%, cat2 10.2%, cat3 6.7%;
+ratio 1.27 → 3.71 products/canonical.
+
+Next lever: the 13,704-product needs_review band (0.65–0.84) is now the dominant opportunity
+— threshold tuning / brand-synonym normalization / embeddings would convert many true twins
+into confirmed matches and lift comparable coverage further.
+
+---
+
+### Topic 14 — Codebase Analysis & Summary
+
+Full read-through of the `baruch-backend` monorepo (internally still named "presio").
+
+#### Structure
+
+```
+baruch-backend/
+├── apps/
+│   ├── baruch-scraper/        ← Scrapy batch: scraping + processing pipeline
+│   └── baruch-catalog-api/    ← FastAPI read-only web service
+├── packages/db/               ← SQL migrations + dbdiagram schema
+└── CLAUDE.md
+```
+
+#### Three logical components
+
+| Component | Responsibility | Writes |
+|---|---|---|
+| Scraper (`baruch-scraper`) | Collect raw products from Wong (Playwright scroll), Plaza Vea (VTEX REST API), Falabella | `product` table (`canonical_id = NULL`) |
+| Processing (`processing/`) | normalize → canonical_product; score → product_match + stamp canonical_id | `canonical_product`, `product_match`, `product.canonical_id` |
+| API (`baruch-catalog-api`) | `/search` (in-memory rapidfuzz over canonical cache), `/{id}/compare` (join through product_match) | nothing (read-only) |
+
+#### Strengths
+
+- Clean component boundaries; Strategy pattern for canonicalization (swappable for LLM/embeddings).
+- Shared pure-function text layer (`text.py`) as single source of truth for normalization, with strong docstrings.
+- Performance-aware unit-spec bucketing avoids O(n²) fuzzy scans.
+- Pragmatic per-store scraping (API when available, browser only when forced).
+
+#### Issues found
+
+1. **Hardcoded DB credentials** (committed password) in `pipelines.py`, `processing/run_pipeline.py`, `api/db.py` — highest-priority fix; move to env/shared config.
+2. Naming drift: code/DB say "presio", repo is "baruch".
+3. `@app.on_event("startup")` is deprecated — use FastAPI `lifespan`.
+4. API search is a full linear scan, cache loaded once at startup (stale after new canonicals).
+5. API has no Repository/Facade layer yet — raw SQL inline, behind the documented design.
+6. Stray artifacts committed (`out.json`, `*.html`, `nohup.out`, `*.log`) — belong in `.gitignore`.
+
+References: *Clean Architecture* (Martin); *PoEAA* (Fowler — Repository/Service Layer); Scrapy, scrapy-playwright, VTEX Catalog API, RapidFuzz docs.
+
+---
+
 ## Session: 2026-05-25
 
 ---

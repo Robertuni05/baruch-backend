@@ -1,14 +1,14 @@
 """
 Post-scrape processing pipeline.
 
-Runs normalize then score in order.
+Single pass: match each unmatched product to an existing canonical, or mint a new
+canonical when none fits. Replaces the former normalize + score two-step.
 
-Usage (from presio-scrapy-batch/ directory):
+Usage (from baruch-scraper/ directory):
     conda run -n presio python -m processing.run_pipeline
 """
 import mysql.connector
-from processing.normalize.run_normalize import run as normalize
-from processing.score.run_score import run as score
+from processing.match.run_match import run as match
 
 
 def get_connection() -> mysql.connector.MySQLConnection:
@@ -23,12 +23,8 @@ def get_connection() -> mysql.connector.MySQLConnection:
 if __name__ == "__main__":
     conn = get_connection()
     try:
-        print("=== Step 1: Normalize ===")
-        normalize(conn)
-
-        print("\n=== Step 2: Score ===")
-        score(conn)
-
+        print("=== Match (canonicalize + score) ===")
+        match(conn)
         print("\nPipeline complete.")
     finally:
         conn.close()
