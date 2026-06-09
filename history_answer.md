@@ -4,6 +4,67 @@
 
 ---
 
+## Session: 2026-06-08
+
+---
+
+### Topic 18 — `/search` ranking fix (proposed, awaiting approval)
+
+User: "this endpoint does not load: `/api/products/search?q=leche&limit=5`" → then "improve
+the endpoints please specially for /search... it uses token_sort_ratio."
+
+**Diagnosis:** the endpoint *does* load (HTTP 200). The real problem is **ranking**.
+`q=leche` returned junk (`Collets Stitch` 0.35, `Plancha Rozia` 0.33, perfumes) because
+`token_sort_ratio` sorts the tokens of **both** strings and scores full-string similarity —
+it demands the whole strings match. A 5-char query vs a 22-char name caps at
+`2*5/(5+22) ≈ 0.37` even when "leche" matches perfectly, so length dominates and relevant
+items can't rank. token_sort_ratio is right for comparing two *full* names (the matching
+batch) but wrong for a search box.
+
+**Proposed fix (`routes/products.py` + `main.py`):**
+
+| Change | Why |
+|---|---|
+| `fuzz.WRatio` instead of `token_sort_ratio` | length- + word-order-robust; short substring queries score high |
+| accent/case `normalize()` (NFKD + strip combining + lower) at startup and on query | Spanish: `café`≈`cafe`, `pestañas` |
+| `score_cutoff ≈ 60` | drops 0.27–0.35 noise → empty instead of garbage |
+| `rapidfuzz.process.extract` (vectorized C) | replaces per-item Python loop over ~7.4k canonicals |
+
+Cache becomes `(id, name, norm)` with `norm` precomputed once at startup; query normalized
+once per request. `/compare` unchanged (correct as is). Requires server restart after apply
+(cache is built at startup). Ref: RapidFuzz scorers
+(https://rapidfuzz.github.io/RapidFuzz/Usage/fuzz.html) — WRatio is the recommended
+general-purpose search scorer.
+
+> Status: proposed only — user left the session before approving. Not yet edited.
+
+---
+
+### Topic 17 — Catalog-API README rewrite (applied)
+
+Rewrote `apps/baruch-catalog-api/README.md`. Fixes vs the stale version: correct run command
+(`apps/baruch-catalog-api`, conda env, `--app-dir` one-liner — old said `cd presio-api`);
+three stores (added Falabella); endpoint contracts matched to real code (`score` rounding,
+`422` validation, empty-`listings` `200` case, cheapest-first ordering); cache-staleness
+warning (restart API after a processing run). Scope discipline: app README **owns** endpoint
+detail / run / structure / cache notes; shared concerns (DB schema, thresholds) **link up**
+to the root README instead of duplicating.
+
+---
+
+### Topic 16 — Is two READMEs good practice? (advice)
+
+Yes — in a monorepo, one README per "unit of understanding" is the convention (Nx, Turborepo,
+Google monorepo guidelines): a **root README = the map** (what Baruch is, layout, shared
+concerns), a **per-app README = the detail** (run + call that one service), colocated with its
+code. The count isn't the smell — **duplication** is. The two files overlapped (endpoints, run
+cmds, thresholds), risking drift (proof: root still had the removed `[Admin seeds
+canonical_product manually]` line). Rule: shared facts live in **one** place (root) and the app
+README links to it. Loose end flagged: trim the root README's endpoint block to a pointer and
+fix the stale data-flow line (not yet done).
+
+---
+
 ## Session: 2026-06-07
 
 ---
