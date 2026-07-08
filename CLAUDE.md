@@ -36,13 +36,14 @@ Spiders, pipelines, and routes are **artifacts** — implementation details insi
 
 **Writes:** `product` table only. `canonical_id` is always `NULL` after scraping.
 
-**Never reads:** `canonical_product` or `product_match`.
+**Never reads:** `canonical_product`.
 
 ### Processing Batch (lives inside `presio-scrapy-batch` for now)
 
 **Responsibility:** In a single pass, match each unmatched product to an existing
 canonical (`>=0.85` auto, `0.65–0.84` review) or mint a new canonical when none fits.
-Populate `canonical_product` + `product_match` and stamp `canonical_id` on matched rows.
+Populate `canonical_product` and stamp `canonical_id` + `match_score` + `match_status` +
+`matched_at` on matched rows directly in `product` (no separate match table).
 This replaces the former normalize + score two-step (which re-ran fuzzy matching twice
 with divergent thresholds and could leave orphan canonicals).
 
@@ -52,7 +53,7 @@ with divergent thresholds and could leave orphan canonicals).
 **Reads:** `product` (unmatched rows), `canonical_product` (auto-grown by the batch;
 may also be seeded manually)
 
-**Writes:** `canonical_product`, `product_match`, `product.canonical_id`
+**Writes:** `canonical_product`, `product.canonical_id` / `match_score` / `match_status` / `matched_at`
 
 ### Presio API (`presio-api`)
 
@@ -77,14 +78,13 @@ presio-scrapy-batch
           match existing canonical (>=0.85 auto / 0.65–0.84 review)
           else mint a new canonical and self-match
         writes → canonical_product (new identities)
-        writes → product_match
-        writes → product.canonical_id
+        writes → product.canonical_id, match_score, match_status, matched_at
 
 presio-api (read-only)
   └── GET /api/products/search?q=...
         reads → canonical_product (fuzzy match via rapidfuzz)
   └── GET /api/products/{id}/compare
-        reads → product_match JOIN product JOIN store
+        reads → product JOIN store (WHERE canonical_id = ? AND match_status = 'auto_matched')
 ```
 
 ---
@@ -105,16 +105,12 @@ product          (id, store_id,                      -- PK: (id, store_id)
                   discount_pct, currency,
                   url,                               -- product page link
                   canonical_id,                      -- FK → canonical_product, nullable
+                  match_score, match_status,          -- nullable until matched
+                  matched_at,                        -- match_status: auto_matched | needs_review
                   created_at, updated_at)
 
 canonical_product (id, name,                         -- normalized product identity
                    category_id, created_at)          -- FULLTEXT index on name
-
-product_match    (id, canonical_id, product_id,      -- similarity cache
-                  store_id, similarity_score,
-                  status,                            -- auto_matched | needs_review
-                  matched_at)
-                  UNIQUE (canonical_id, product_id, store_id)
 ```
 
 ### Seed data
@@ -132,7 +128,7 @@ INSERT INTO category (id, name) VALUES
 
 | Pattern | Class | Why |
 |---|---|---|
-| Repository | `CanonicalProductRepository`, `ProductMatchRepository` | All SQL in one place; no SQL in business logic |
+| Repository | `CanonicalProductRepository`, `ProductRepository` | All SQL in one place; no SQL in business logic |
 | Strategy | `MatchStrategy` (ABC), `FuzzyMatchStrategy` | Swap matching algorithm without touching callers |
 | Facade | `ProductComparisonFacade` | Single entry point for Routes; orchestrates search + compare |
 
@@ -148,8 +144,8 @@ Clean Architecture alignment:
 
 | Score | Status | Action |
 |---|---|---|
-| >= 0.85 | `auto_matched` | Insert `product_match`, set `product.canonical_id` |
-| 0.65 – 0.84 | `needs_review` | Insert `product_match`, queue for manual review |
+| >= 0.85 | `auto_matched` | Set `product.canonical_id` + `match_status` |
+| 0.65 – 0.84 | `needs_review` | Set `product.canonical_id` + `match_status`, queue for manual review |
 | < 0.65 | skip | No row inserted |
 
 Algorithm: `rapidfuzz.fuzz.token_sort_ratio` — handles word-order differences across stores.

@@ -15,7 +15,7 @@ This repository is the **backend monorepo**. The web frontend lives in a separat
 baruch-backend/
 ├── apps/
 │   ├── baruch-scraper/        # Scrapy spiders + nodriver fetcher → writes product table
-│   ├── baruch-catalog-api/    # FastAPI read-only service → search + price compare
+│   ├── baruch-api/            # FastAPI read-only service → search + price compare
 │   └── baruch-advisor-api/    # (planned) LLM "Asesor" layer → conversational advice
 └── packages/
     └── db/                    # shared schema, migrations, dbdiagram source
@@ -27,7 +27,7 @@ enforce single responsibility — the scraper never serves HTTP, the API never w
 | App | Stack | Responsibility | Reads / Writes |
 |---|---|---|---|
 | `baruch-scraper` | Scrapy, scrapy-playwright, nodriver | Collect raw prices | Writes `product` |
-| `baruch-catalog-api` | FastAPI, rapidfuzz | Search + compare endpoints | Reads all, writes nothing |
+| `baruch-api` | FastAPI, rapidfuzz | Search + compare endpoints | Reads all, writes nothing |
 | `baruch-advisor-api` | FastAPI, Anthropic SDK *(planned)* | AI advisor over the catalog | Calls catalog-api |
 
 ---
@@ -50,8 +50,8 @@ conda install Scrapy
 pip install scrapy-playwright mysql-connector-python pyyaml nodriver
 playwright install
 
-# Catalog API
-pip install -r apps/baruch-catalog-api/requirements.txt
+# API
+pip install -r apps/baruch-api/requirements.txt
 ```
 
 ---
@@ -82,13 +82,6 @@ conda run -n presio python main.py --supermarket wong --category tecnologia --lo
 conda run -n presio python -m fetchers.falabella_fetcher --category tecnologia --max-pages 1
 ```
 
-### Post-scrape pipeline (canonicalization + matching)
-
-```bash
-cd apps/baruch-scraper
-conda run -n presio python -m processing.run_pipeline
-```
-
 ### Spider arguments
 
 | Argument | Default | Description |
@@ -102,15 +95,15 @@ conda run -n presio python -m processing.run_pipeline
 
 ---
 
-## apps/baruch-catalog-api
+## apps/baruch-api
 
 Read-only FastAPI service. Loads `canonical_product` into memory at startup and serves
 fuzzy search + price comparison.
 
-### Run (from inside the catalog-api directory)
+### Run (from inside the api directory)
 
 ```bash
-cd apps/baruch-catalog-api
+cd apps/baruch-api
 conda run -n presio uvicorn main:app --reload
 ```
 
@@ -150,15 +143,11 @@ product           (id, store_id,                      -- PK: (id, store_id)
                    regular_price, online_price,
                    discount_pct, currency, url,
                    canonical_id,                       -- FK → canonical_product, nullable
+                   match_score, match_status,          -- nullable until matched
+                   matched_at,                         -- match_status: auto_matched | needs_review
                    created_at, updated_at)
 
 canonical_product (id, name, category_id, created_at) -- FULLTEXT index on name
-
-product_match     (id, canonical_id, product_id,      -- similarity cache
-                   store_id, similarity_score,
-                   status,                             -- auto_matched | needs_review
-                   matched_at)
-                   UNIQUE (canonical_id, product_id, store_id)
 ```
 
 ### Seed data
@@ -180,9 +169,9 @@ INSERT INTO category (id, name) VALUES
 [Admin seeds canonical_product manually]
 
 baruch-scraper      → product (canonical_id = NULL)
-processing pipeline → product_match + product.canonical_id
-baruch-catalog-api  → reads only, serves search + compare
-baruch-advisor-api  → calls catalog-api as tools (planned)
+(matching pipeline) → product.canonical_id, match_score, match_status, matched_at  (being reworked, not currently runnable)
+baruch-api          → reads only, serves search + compare
+baruch-advisor-api  → calls baruch-api as tools (planned)
 ```
 
 ---
@@ -191,8 +180,8 @@ baruch-advisor-api  → calls catalog-api as tools (planned)
 
 | Score | Status | Action |
 |---|---|---|
-| >= 0.85 | `auto_matched` | Insert `product_match`, set `product.canonical_id` |
-| 0.65 – 0.84 | `needs_review` | Insert `product_match`, queue for manual review |
+| >= 0.85 | `auto_matched` | Set `product.canonical_id` + `match_status` |
+| 0.65 – 0.84 | `needs_review` | Set `product.canonical_id` + `match_status`, queue for manual review |
 | < 0.65 | skip | No row inserted |
 
 Algorithm: `rapidfuzz.fuzz.token_sort_ratio` — handles word-order differences across stores.

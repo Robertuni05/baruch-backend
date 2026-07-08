@@ -37,11 +37,10 @@ def compare(canonical_id: int):
             p.discount_pct,
             p.currency,
             p.url
-        FROM product_match pm
-        JOIN product p ON p.id = pm.product_id AND p.store_id = pm.store_id
-        JOIN store   s ON s.id = pm.store_id
-        WHERE pm.canonical_id = %s
-          AND pm.status = 'auto_matched'
+        FROM product p
+        JOIN store s ON s.id = p.store_id
+        WHERE p.canonical_id = %s
+          AND p.match_status = 'auto_matched'
         ORDER BY p.online_price ASC
     """, (canonical_id,))
 

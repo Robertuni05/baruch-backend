@@ -1,4 +1,4 @@
-# baruch-catalog-api
+# baruch-api
 
 Read-only FastAPI service for Baruch — fuzzy product **search** and cross-store price
 **comparison** over the Peruvian-supermarket catalog (Plaza Vea, Wong, Falabella).
@@ -22,7 +22,7 @@ Read-only FastAPI service for Baruch — fuzzy product **search** and cross-stor
 ## Setup
 
 ```bash
-# From apps/baruch-catalog-api/
+# From apps/baruch-api/
 pip install -r requirements.txt
 ```
 
@@ -33,17 +33,17 @@ Configure the database connection in `db.py` (host, user, password, database).
 ## Run
 
 The app uses top-level imports (`from db import ...`, `from routes.products import ...`),
-so it must run with `apps/baruch-catalog-api/` on the import path.
+so it must run with `apps/baruch-api/` on the import path.
 
 ```bash
-# From apps/baruch-catalog-api/
+# From apps/baruch-api/
 conda run -n presio uvicorn main:app --reload --port 8000
 ```
 
 Or as a one-liner from the repo root:
 
 ```bash
-conda run -n presio uvicorn main:app --reload --port 8000 --app-dir apps/baruch-catalog-api
+conda run -n presio uvicorn main:app --reload --port 8000 --app-dir apps/baruch-api
 ```
 
 - Server: `http://localhost:8000`
@@ -157,7 +157,7 @@ curl "http://localhost:8000/api/products/142/compare"
 ## Project Structure
 
 ```
-apps/baruch-catalog-api/
+apps/baruch-api/
 ├── main.py            # FastAPI app + startup canonical-cache loader
 ├── db.py              # MySQL connection factory
 ├── routes/
@@ -178,7 +178,5 @@ apps/baruch-catalog-api/
   data is never stale.
 - **Matching** — search ranks with `rapidfuzz token_sort_ratio`; `/compare` surfaces only
   `auto_matched` rows (similarity ≥ 0.85). `needs_review` rows (0.65–0.84) are intentionally
-  excluded. Quality is judged by canonicals matched across ≥2 stores (see the scraper's
-  `processing/report.py`), not raw match count. Threshold definitions live in the
-  [root README](../../README.md#matching-thresholds).
-```
+  excluded. Quality is judged by canonicals matched across ≥2 stores, not raw match count.
+  Threshold definitions live in the [root README](../../README.md#matching-thresholds).
